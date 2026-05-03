@@ -12,8 +12,8 @@ Dự án này cung cấp một framework tính toán và mô phỏng nhằm tố
 4. **Mô phỏng Dịch tễ (Epidemic Simulation):** Khởi chạy mô hình lan truyền SIR thông qua thư viện EoN trên đồ thị đã can thiệp để mô phỏng quỹ đạo lây nhiễm.  
 5. **Trực quan hóa (Visualization):** Đánh giá hiệu suất thông qua biểu đồ đường (Infection Curves) so sánh đỉnh dịch (Peak Infection) giữa các chiến lược và sử dụng NetworkX/Gephi để kết xuất cấu trúc mạng lưới.
 
-requirements.txt
-
+`requirements.txt`
+```
 numpy  
 pandas  
 matplotlib  
@@ -21,13 +21,12 @@ networkx
 torch  
 torch\_geometric  
 EoN
-
+```
 ## **Cài đặt và triển khai**
 
 1. **Thiết lập môi trường ảo và cài đặt thư viện:**
 
-Bash
-
+```
 python \-m venv venv    
 \# Trên Linux/macOS    
 source venv/bin/activate      
@@ -35,13 +34,11 @@ source venv/bin/activate
 venv\\Scripts\\activate
 
 pip install \-r requirements.txt
-
+```
 2. **Khởi chạy luồng mô phỏng chính:** Đảm bảo bạn đang ở thư mục gốc của dự án, thực thi tập lệnh sau để chạy đường ống phân tích:
-
-Bash
-
+```
 python main.py \--dataset sociopatterns \--budget 0.05 \--epochs 200
-
+```
 3. **Thực thi và đối chiếu:** \* Hệ thống sẽ tự động tính toán Centrality, huấn luyện GraphSAGE proxy và chạy mô phỏng SIR.  
 * Các tệp kết quả (.csv chứa số liệu thống kê và .png chứa biểu đồ lây nhiễm) sẽ được tự động xuất vào thư mục results/.
 
