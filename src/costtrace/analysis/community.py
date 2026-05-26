@@ -21,7 +21,10 @@ logging.info("Community detection start")
 G = pickle.load(open("data/processed/graph.pkl", "rb"))
 
 # Global Louvain (whole graph, weight = duration)
-communities = louvain_communities(G, weight="total_duration_sec", seed=42)
+communities = sorted(
+    [set(community) for community in louvain_communities(G, weight="total_duration_sec", seed=42)],
+    key=lambda community: min(community),
+)
 modularity = nx.community.modularity(G, communities, weight="total_duration_sec")
 
 print("=== LOUVAIN COMMUNITY DETECTION ===")
@@ -32,12 +35,13 @@ print("  (Ky vong: ~88 vi 88 HH components, validate cau truc)")
 # Map node to community id
 node_community = {}
 for cid, comm in enumerate(communities):
-    for node in comm:
+    for node in sorted(comm):
         node_community[node] = cid
 
 # Compare with household label
 centrality_df = pd.read_csv("results/centrality_scores.csv")
 centrality_df["louvain_community_id"] = centrality_df["node_id"].map(node_community)
+centrality_df = centrality_df.sort_values(["hhid", "node_id"]).reset_index(drop=True)
 
 # Agreement: within-HH pairs in same community
 agreement_count = 0
@@ -62,6 +66,7 @@ community_df = pd.DataFrame(list(node_community.items()), columns=["node_id", "c
 community_df["community_size"] = community_df["community_id"].map(
     community_df["community_id"].value_counts()
 )
+community_df = community_df.sort_values(["community_id", "node_id"]).reset_index(drop=True)
 community_df.to_csv("results/community_assignments.csv", index=False)
 
 with open("results/community_metrics.json", "w") as f:

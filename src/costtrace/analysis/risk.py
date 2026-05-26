@@ -14,7 +14,7 @@ logging.basicConfig(
 
 logging.info("Risk score synthesis start")
 
-centrality_df = pd.read_csv("results/centrality_scores.csv")
+centrality_df = pd.read_csv("results/centrality_scores.csv").sort_values("node_id")
 
 # Encode categorical features for future GNN use
 centrality_df["sex_enc"] = (centrality_df["sex"] == "Male").astype(int)
@@ -48,10 +48,12 @@ centrality_df["composite_risk_score"] = (
     + 0.15 * centrality_df["sleep_room_enc"]
 )
 
-centrality_df["rank_by_composite"] = (
-    centrality_df["composite_risk_score"].rank(ascending=False).astype(int)
+centrality_df = centrality_df.sort_values(
+    ["composite_risk_score", "weighted_degree_sec", "node_id"],
+    ascending=[False, False, True],
+    kind="mergesort",
 )
-centrality_df = centrality_df.sort_values("rank_by_composite")
+centrality_df["rank_by_composite"] = range(1, len(centrality_df) + 1)
 
 centrality_df.to_csv("results/node_scores.csv", index=False)
 print("OK: Exported results/node_scores.csv")

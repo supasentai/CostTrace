@@ -64,7 +64,7 @@ for sg in comps:
             }
         )
 
-centrality_df = pd.DataFrame(all_centrality)
+centrality_df = pd.DataFrame(all_centrality).sort_values(["hhid", "node_id"])
 centrality_df.to_csv("results/centrality_scores.csv", index=False)
 
 # Print top super-spreaders (SARS+ nodes with highest degree)
