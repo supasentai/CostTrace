@@ -1,0 +1,543 @@
+indid1,indid2,hh,pair_sars,sars_indid1,sars_indid2,age_indid1,age_indid2,total_duration_sec,n_contacts,has_real_ts
+J008-001,J008-002,J008,No transmission,Positive,Negative,18-34,35-59,22680,198,True
+J008-001,J008-004,J008,Transmission,Positive,Positive,18-34,<5,97360,1524,True
+J008-001,J008-005,J008,Transmission,Positive,Positive,18-34,12-May,28120,754,True
+J008-001,J008-006,J008,Transmission,Positive,Positive,18-34,13-17,38520,430,True
+J008-001,J008-007,J008,No transmission,Positive,Negative,18-34,18-34,28560,146,True
+J008-002,J008-004,J008,No transmission,Negative,Positive,35-59,<5,21000,292,True
+J008-002,J008-005,J008,No transmission,Negative,Positive,35-59,12-May,1520,68,True
+J008-002,J008-006,J008,No transmission,Negative,Positive,35-59,13-17,24000,210,True
+J008-002,J008-007,J008,Both negative,Negative,Negative,35-59,18-34,20960,34,True
+J008-004,J008-005,J008,Transmission,Positive,Positive,<5,12-May,52760,944,True
+J008-004,J008-006,J008,Transmission,Positive,Positive,<5,13-17,68320,1054,True
+J008-004,J008-007,J008,No transmission,Positive,Negative,<5,18-34,35920,202,True
+J008-005,J008-006,J008,Transmission,Positive,Positive,12-May,13-17,20840,550,True
+J008-005,J008-007,J008,No transmission,Positive,Negative,12-May,18-34,8800,188,True
+J008-006,J008-007,J008,No transmission,Positive,Negative,13-17,18-34,40840,336,True
+J009-001,J009-002,J009,Transmission,Positive,Positive,35-59,60,24840,658,True
+J010-001,J010-002,J010,No transmission,Positive,Negative,18-34,60,680,26,True
+J010-001,J010-003,J010,No transmission,Positive,Negative,18-34,18-34,80,4,True
+J010-002,J010-003,J010,Both negative,Negative,Negative,60,18-34,30720,728,True
+J020-001,J020-002,J020,Transmission,Positive,Positive,18-34,60,3120,68,False
+J020-001,J020-003,J020,No transmission,Positive,Negative,18-34,60,1720,32,False
+J020-001,J020-006,J020,No transmission,Positive,Negative,18-34,12-May,80,4,False
+J020-001,J020-007,J020,Transmission,Positive,Positive,18-34,13-17,1720,48,False
+J020-002,J020-003,J020,No transmission,Positive,Negative,60,60,18960,498,False
+J020-002,J020-006,J020,No transmission,Positive,Negative,60,12-May,7520,206,False
+J020-002,J020-007,J020,Transmission,Positive,Positive,60,13-17,8480,238,False
+J020-003,J020-006,J020,Both negative,Negative,Negative,60,12-May,5720,126,False
+J020-003,J020-007,J020,No transmission,Negative,Positive,60,13-17,960,32,False
+J020-006,J020-007,J020,No transmission,Negative,Positive,12-May,13-17,320,14,False
+J021-001,J021-002,J021,No transmission,Positive,Negative,35-59,18-34,1720,52,False
+J021-001,J021-003,J021,No transmission,Positive,Negative,35-59,<5,15560,428,False
+J021-002,J021-003,J021,Both negative,Negative,Negative,18-34,<5,3960,80,False
+J022-001,J022-003,J022,No transmission,Positive,Negative,35-59,12-May,24120,706,False
+J022-001,J022-004,J022,No transmission,Positive,Negative,35-59,13-17,7040,174,False
+J022-003,J022-004,J022,Both negative,Negative,Negative,12-May,13-17,20080,536,False
+J023-001,J023-002,J023,No transmission,Positive,Negative,18-34,60,2480,12,False
+J023-001,J023-004,J023,No transmission,Positive,Negative,18-34,18-34,2560,30,False
+J023-001,J023-005,J023,No transmission,Positive,Negative,18-34,18-34,3120,8,False
+J023-001,J023-006,J023,Transmission,Positive,Positive,18-34,13-17,4600,136,False
+J023-001,J023-008,J023,No transmission,Positive,Negative,18-34,12-May,8280,118,False
+J023-002,J023-004,J023,Both negative,Negative,Negative,60,18-34,6120,106,False
+J023-002,J023-005,J023,Both negative,Negative,Negative,60,18-34,6240,62,False
+J023-002,J023-006,J023,No transmission,Negative,Positive,60,13-17,25960,578,False
+J023-002,J023-008,J023,Both negative,Negative,Negative,60,12-May,22520,618,False
+J023-004,J023-005,J023,Both negative,Negative,Negative,18-34,18-34,43760,774,False
+J023-004,J023-006,J023,No transmission,Negative,Positive,18-34,13-17,29120,506,False
+J023-004,J023-008,J023,Both negative,Negative,Negative,18-34,12-May,22640,590,False
+J023-005,J023-006,J023,No transmission,Negative,Positive,18-34,13-17,26560,434,False
+J023-005,J023-008,J023,Both negative,Negative,Negative,18-34,12-May,17120,528,False
+J023-006,J023-008,J023,No transmission,Positive,Negative,13-17,12-May,108280,2282,False
+J024-001,J024-002,J024,No transmission,Positive,Negative,35-59,35-59,760,30,False
+J024-001,J024-004,J024,No transmission,Positive,Negative,35-59,13-17,600,20,False
+J024-002,J024-004,J024,Both negative,Negative,Negative,35-59,13-17,680,30,False
+J027-001,J027-002,J027,No transmission,Positive,Negative,35-59,35-59,11720,274,False
+J027-001,J027-003,J027,Transmission,Positive,Positive,35-59,35-59,40,2,False
+J027-001,J027-004,J027,Transmission,Positive,Positive,35-59,18-34,320,12,False
+J027-001,J027-005,J027,No transmission,Positive,Negative,35-59,18-34,200,8,False
+J027-002,J027-004,J027,No transmission,Negative,Positive,35-59,18-34,960,26,False
+J027-002,J027-005,J027,Both negative,Negative,Negative,35-59,18-34,1240,16,False
+J027-003,J027-005,J027,No transmission,Positive,Negative,35-59,18-34,360,10,False
+J029-001,J029-002,J029,No transmission,Positive,Negative,35-59,35-59,32000,682,False
+J029-001,J029-003,J029,Transmission,Positive,Positive,35-59,13-17,7520,226,False
+J029-002,J029-003,J029,No transmission,Negative,Positive,35-59,13-17,8600,222,False
+J030-001,J030-003,J030,No transmission,Positive,Negative,35-59,12-May,35960,208,False
+J030-001,J030-004,J030,No transmission,Positive,Negative,35-59,12-May,14920,318,False
+J030-003,J030-004,J030,Both negative,Negative,Negative,12-May,12-May,9640,244,False
+J031-001,J031-002,J031,No transmission,Positive,Negative,60,60,1080,28,False
+J033-001,J033-002,J033,No transmission,Positive,Negative,35-59,60,8960,118,False
+J033-001,J033-005,J033,No transmission,Positive,Negative,35-59,13-17,2200,56,False
+J033-001,J033-007,J033,No transmission,Positive,Negative,35-59,12-May,13840,226,False
+J033-001,J033-008,J033,No transmission,Positive,Negative,35-59,12-May,680,26,False
+J033-002,J033-005,J033,Both negative,Negative,Negative,60,13-17,5120,120,False
+J033-002,J033-007,J033,Both negative,Negative,Negative,60,12-May,71840,370,False
+J033-002,J033-008,J033,Both negative,Negative,Negative,60,12-May,11480,78,False
+J033-005,J033-007,J033,Both negative,Negative,Negative,13-17,12-May,38200,158,False
+J033-005,J033-008,J033,Both negative,Negative,Negative,13-17,12-May,12760,288,False
+J033-007,J033-008,J033,Both negative,Negative,Negative,12-May,12-May,78840,1430,False
+J037-001,J037-002,J037,Transmission,Positive,Positive,35-59,35-59,3920,158,False
+J037-001,J037-003,J037,Transmission,Positive,Positive,35-59,18-34,8560,190,False
+J037-001,J037-004,J037,Transmission,Positive,Positive,35-59,12-May,4880,154,False
+J037-002,J037-003,J037,Transmission,Positive,Positive,35-59,18-34,1440,62,False
+J037-002,J037-004,J037,Transmission,Positive,Positive,35-59,12-May,3440,126,False
+J037-003,J037-004,J037,Transmission,Positive,Positive,18-34,12-May,1080,44,False
+J039-001,J039-002,J039,No transmission,Positive,Negative,35-59,35-59,1720,56,False
+J039-001,J039-003,J039,Transmission,Positive,Positive,35-59,18-34,24360,522,False
+J039-001,J039-005,J039,Transmission,Positive,Positive,35-59,13-17,4160,120,False
+J039-001,J039-006,J039,Transmission,Positive,Positive,35-59,13-17,12000,240,False
+J039-001,J039-007,J039,Transmission,Positive,Positive,35-59,13-17,1640,44,False
+J039-002,J039-003,J039,No transmission,Negative,Positive,35-59,18-34,27760,442,False
+J039-002,J039-005,J039,No transmission,Negative,Positive,35-59,13-17,2640,82,False
+J039-002,J039-006,J039,No transmission,Negative,Positive,35-59,13-17,11400,246,False
+J039-002,J039-007,J039,No transmission,Negative,Positive,35-59,13-17,7840,170,False
+J039-003,J039-005,J039,Transmission,Positive,Positive,18-34,13-17,14840,298,False
+J039-003,J039-006,J039,Transmission,Positive,Positive,18-34,13-17,22440,344,False
+J039-003,J039-007,J039,Transmission,Positive,Positive,18-34,13-17,27360,490,False
+J039-005,J039-006,J039,Transmission,Positive,Positive,13-17,13-17,90680,970,False
+J039-005,J039-007,J039,Transmission,Positive,Positive,13-17,13-17,1760,48,False
+J039-006,J039-007,J039,Transmission,Positive,Positive,13-17,13-17,12760,336,False
+J041-001,J041-002,J041,Transmission,Positive,Positive,18-34,60,9960,194,False
+J041-001,J041-003,J041,Transmission,Positive,Positive,18-34,60,11960,344,False
+J041-001,J041-004,J041,No transmission,Positive,Negative,18-34,35-59,1680,56,False
+J041-001,J041-005,J041,Transmission,Positive,Positive,18-34,13-17,41280,864,False
+J041-002,J041-003,J041,Transmission,Positive,Positive,60,60,52960,812,False
+J041-002,J041-004,J041,No transmission,Positive,Negative,60,35-59,760,20,False
+J041-002,J041-005,J041,Transmission,Positive,Positive,60,13-17,15560,336,False
+J041-003,J041-004,J041,No transmission,Positive,Negative,60,35-59,4680,106,False
+J041-003,J041-005,J041,Transmission,Positive,Positive,60,13-17,19680,386,False
+J041-004,J041-005,J041,No transmission,Negative,Positive,35-59,13-17,2240,36,False
+J042-001,J042-003,J042,Transmission,Positive,Positive,35-59,60,10000,254,False
+J042-001,J042-004,J042,No transmission,Positive,Negative,35-59,12-May,3960,120,False
+J042-003,J042-004,J042,No transmission,Positive,Negative,60,12-May,8960,246,False
+J043-001,J043-002,J043,Transmission,Positive,Positive,18-34,18-34,17400,332,False
+J043-001,J043-003,J043,Transmission,Positive,Positive,18-34,35-59,14200,320,False
+J043-001,J043-005,J043,Transmission,Positive,Positive,18-34,12-May,24560,326,False
+J043-001,J043-006,J043,Transmission,Positive,Positive,18-34,12-May,11520,248,False
+J043-002,J043-003,J043,Transmission,Positive,Positive,18-34,35-59,10720,214,False
+J043-002,J043-004,J043,No transmission,Positive,Negative,18-34,18-34,40,2,False
+J043-002,J043-005,J043,Transmission,Positive,Positive,18-34,12-May,5880,150,False
+J043-002,J043-006,J043,Transmission,Positive,Positive,18-34,12-May,5960,164,False
+J043-003,J043-004,J043,No transmission,Positive,Negative,35-59,18-34,200,8,False
+J043-003,J043-005,J043,Transmission,Positive,Positive,35-59,12-May,65440,1186,False
+J043-003,J043-006,J043,Transmission,Positive,Positive,35-59,12-May,43080,1060,False
+J043-004,J043-005,J043,No transmission,Negative,Positive,18-34,12-May,280,10,False
+J043-004,J043-006,J043,No transmission,Negative,Positive,18-34,12-May,160,6,False
+J043-005,J043-006,J043,Transmission,Positive,Positive,12-May,12-May,223440,2628,False
+J044-001,J044-002,J044,Transmission,Positive,Positive,18-34,35-59,1240,38,False
+J044-001,J044-003,J044,Transmission,Positive,Positive,18-34,35-59,400,14,False
+J044-001,J044-004,J044,Transmission,Positive,Positive,18-34,18-34,8280,200,False
+J044-001,J044-005,J044,Transmission,Positive,Positive,18-34,18-34,1120,36,False
+J044-001,J044-006,J044,Transmission,Positive,Positive,18-34,13-17,12880,244,False
+J044-001,J044-007,J044,No transmission,Positive,Negative,18-34,12-May,2520,78,False
+J044-002,J044-003,J044,Transmission,Positive,Positive,35-59,35-59,5920,142,False
+J044-002,J044-004,J044,Transmission,Positive,Positive,35-59,18-34,1080,44,False
+J044-002,J044-005,J044,Transmission,Positive,Positive,35-59,18-34,280,12,False
+J044-002,J044-006,J044,Transmission,Positive,Positive,35-59,13-17,18280,412,False
+J044-002,J044-007,J044,No transmission,Positive,Negative,35-59,12-May,2840,98,False
+J044-003,J044-004,J044,Transmission,Positive,Positive,35-59,18-34,4280,150,False
+J044-003,J044-005,J044,Transmission,Positive,Positive,35-59,18-34,1720,38,False
+J044-003,J044-006,J044,Transmission,Positive,Positive,35-59,13-17,9480,230,False
+J044-003,J044-007,J044,No transmission,Positive,Negative,35-59,12-May,2920,70,False
+J044-004,J044-005,J044,Transmission,Positive,Positive,18-34,18-34,2160,50,False
+J044-004,J044-006,J044,Transmission,Positive,Positive,18-34,13-17,39920,650,False
+J044-004,J044-007,J044,No transmission,Positive,Negative,18-34,12-May,7760,226,False
+J044-005,J044-006,J044,Transmission,Positive,Positive,18-34,13-17,15600,300,False
+J044-005,J044-007,J044,No transmission,Positive,Negative,18-34,12-May,5840,144,False
+J044-006,J044-007,J044,No transmission,Positive,Negative,13-17,12-May,82960,1316,False
+J047-001,J047-002,J047,Transmission,Positive,Positive,18-34,35-59,280,12,False
+J047-001,J047-003,J047,Transmission,Positive,Positive,18-34,18-34,40,2,False
+J047-002,J047-003,J047,Transmission,Positive,Positive,35-59,18-34,120,6,False
+J048-001,J048-002,J048,No transmission,Positive,Negative,60,35-59,9360,280,False
+J048-001,J048-003,J048,No transmission,Positive,Negative,60,13-17,1880,64,False
+J048-001,J048-004,J048,No transmission,Positive,Negative,60,13-17,6080,192,False
+J048-001,J048-005,J048,No transmission,Positive,Negative,60,12-May,8400,220,False
+J048-002,J048-003,J048,Both negative,Negative,Negative,35-59,13-17,3000,94,False
+J048-002,J048-004,J048,Both negative,Negative,Negative,35-59,13-17,8120,246,False
+J048-002,J048-005,J048,Both negative,Negative,Negative,35-59,12-May,19200,464,False
+J048-003,J048-004,J048,Both negative,Negative,Negative,13-17,13-17,29760,726,False
+J048-003,J048-005,J048,Both negative,Negative,Negative,13-17,12-May,18880,392,False
+J048-004,J048-005,J048,Both negative,Negative,Negative,13-17,12-May,11800,284,False
+J050-001,J050-002,J050,Transmission,Positive,Positive,35-59,35-59,6600,172,False
+J050-001,J050-003,J050,Transmission,Positive,Positive,35-59,18-34,2160,32,False
+J050-001,J050-004,J050,Transmission,Positive,Positive,35-59,13-17,10840,228,False
+J050-002,J050-003,J050,Transmission,Positive,Positive,35-59,18-34,3320,32,False
+J050-002,J050-004,J050,Transmission,Positive,Positive,35-59,13-17,2960,92,False
+J050-003,J050-004,J050,Transmission,Positive,Positive,18-34,13-17,2600,56,False
+J053-001,J053-002,J053,No transmission,Positive,Negative,18-34,35-59,43760,742,False
+J053-001,J053-003,J053,No transmission,Positive,Negative,18-34,<5,59040,978,False
+J053-002,J053-003,J053,Both negative,Negative,Negative,35-59,<5,48640,988,False
+J054-001,J054-002,J054,Transmission,Positive,Positive,35-59,35-59,2160,66,False
+J054-001,J054-003,J054,Transmission,Positive,Positive,35-59,18-34,480,22,False
+J054-001,J054-004,J054,Transmission,Positive,Positive,35-59,13-17,40,2,False
+J054-002,J054-003,J054,Transmission,Positive,Positive,35-59,18-34,14560,104,False
+J054-002,J054-004,J054,Transmission,Positive,Positive,35-59,13-17,5360,8,False
+J054-003,J054-004,J054,Transmission,Positive,Positive,18-34,13-17,6080,6,False
+J055-001,J055-004,J055,Transmission,Positive,Positive,35-59,12-May,2760,86,False
+J057-001,J057-002,J057,Transmission,Positive,Positive,18-34,18-34,2320,80,False
+J057-001,J057-003,J057,Transmission,Positive,Positive,18-34,18-34,240,6,False
+J057-001,J057-004,J057,Transmission,Positive,Positive,18-34,18-34,9480,258,False
+J057-002,J057-003,J057,Transmission,Positive,Positive,18-34,18-34,12720,366,False
+J057-002,J057-004,J057,Transmission,Positive,Positive,18-34,18-34,14520,438,False
+J057-003,J057-004,J057,Transmission,Positive,Positive,18-34,18-34,8400,254,False
+J059-001,J059-002,J059,Transmission,Positive,Positive,35-59,13-17,1240,32,False
+J059-001,J059-003,J059,Transmission,Positive,Positive,35-59,12-May,1680,32,False
+J059-001,J059-004,J059,No transmission,Positive,Negative,35-59,<5,520,6,False
+J059-001,J059-005,J059,No transmission,Positive,Negative,35-59,<5,7600,88,False
+J059-002,J059-003,J059,Transmission,Positive,Positive,13-17,12-May,4000,94,False
+J059-002,J059-004,J059,No transmission,Positive,Negative,13-17,<5,1320,32,False
+J059-002,J059-005,J059,No transmission,Positive,Negative,13-17,<5,3400,78,False
+J059-003,J059-004,J059,No transmission,Positive,Negative,12-May,<5,2080,44,False
+J059-003,J059-005,J059,No transmission,Positive,Negative,12-May,<5,5400,120,False
+J059-004,J059-005,J059,Both negative,Negative,Negative,<5,<5,2920,74,False
+J063-001,J063-002,J063,Transmission,Positive,Positive,18-34,35-59,74040,390,True
+J063-001,J063-003,J063,Transmission,Positive,Positive,18-34,35-59,82720,796,True
+J063-001,J063-004,J063,Transmission,Positive,Positive,18-34,13-17,15480,110,True
+J063-001,J063-005,J063,No transmission,Positive,Negative,18-34,12-May,118440,1150,True
+J063-002,J063-003,J063,Transmission,Positive,Positive,35-59,35-59,56600,496,True
+J063-002,J063-004,J063,Transmission,Positive,Positive,35-59,13-17,16960,150,True
+J063-002,J063-005,J063,No transmission,Positive,Negative,35-59,12-May,67320,652,True
+J063-003,J063-004,J063,Transmission,Positive,Positive,35-59,13-17,6600,70,True
+J063-003,J063-005,J063,No transmission,Positive,Negative,35-59,12-May,36120,628,True
+J063-004,J063-005,J063,No transmission,Positive,Negative,13-17,12-May,12040,136,True
+J064-001,J064-002,J064,Transmission,Positive,Positive,35-59,35-59,22960,492,False
+J064-001,J064-003,J064,Transmission,Positive,Positive,35-59,12-May,28160,424,False
+J064-002,J064-003,J064,Transmission,Positive,Positive,35-59,12-May,9440,224,False
+J067-001,J067-002,J067,Transmission,Positive,Positive,35-59,35-59,14840,146,True
+J067-001,J067-005,J067,Transmission,Positive,Positive,35-59,13-17,4320,46,True
+J067-001,J067-006,J067,Transmission,Positive,Positive,35-59,13-17,17280,264,True
+J067-001,J067-007,J067,Transmission,Positive,Positive,35-59,12-May,3120,18,True
+J067-002,J067-005,J067,Transmission,Positive,Positive,35-59,13-17,4880,46,True
+J067-002,J067-006,J067,Transmission,Positive,Positive,35-59,13-17,5760,64,True
+J067-002,J067-007,J067,Transmission,Positive,Positive,35-59,12-May,3720,6,True
+J067-005,J067-006,J067,Transmission,Positive,Positive,13-17,13-17,59400,922,True
+J067-005,J067-007,J067,Transmission,Positive,Positive,13-17,12-May,4280,32,True
+J067-006,J067-007,J067,Transmission,Positive,Positive,13-17,12-May,5200,26,True
+J068-001,J068-002,J068,No transmission,Positive,Negative,18-34,18-34,640,6,True
+J070-001,J070-002,J070,Transmission,Positive,Positive,35-59,35-59,2000,16,True
+J070-001,J070-003,J070,Transmission,Positive,Positive,35-59,18-34,7960,158,True
+J070-001,J070-004,J070,Transmission,Positive,Positive,35-59,13-17,1400,4,True
+J070-002,J070-003,J070,Transmission,Positive,Positive,35-59,18-34,2920,48,True
+J070-002,J070-004,J070,Transmission,Positive,Positive,35-59,13-17,3840,52,True
+J070-003,J070-004,J070,Transmission,Positive,Positive,18-34,13-17,7360,92,True
+J072-001,J072-003,J072,No transmission,Positive,Negative,35-59,18-34,9560,170,True
+J073-001,J073-002,J073,Transmission,Positive,Positive,18-34,35-59,2040,48,True
+J073-002,J073-003,J073,No transmission,Positive,Negative,35-59,60,760,22,True
+J075-001,J075-003,J075,No transmission,Positive,Negative,18-34,12-May,62160,852,True
+J075-001,J075-004,J075,Transmission,Positive,Positive,18-34,12-May,19520,430,True
+J075-003,J075-004,J075,No transmission,Negative,Positive,12-May,12-May,104560,1584,True
+J076-001,J076-002,J076,Transmission,Positive,Positive,18-34,18-34,3840,106,True
+J077-001,J077-002,J077,No transmission,Positive,Negative,60,35-59,1920,60,True
+J077-001,J077-005,J077,No transmission,Positive,Negative,60,13-17,1520,58,True
+J077-002,J077-003,J077,Both negative,Negative,Negative,35-59,13-17,480,16,True
+J077-002,J077-005,J077,Both negative,Negative,Negative,35-59,13-17,3240,76,True
+S004-001,S004-002,S004,No transmission,Positive,Negative,35-59,35-59,560,16,True
+S004-001,S004-003,S004,No transmission,Positive,Negative,35-59,60,16760,382,True
+S004-002,S004-003,S004,Both negative,Negative,Negative,35-59,60,2480,52,True
+S005-001,S005-002,S005,No transmission,Positive,Negative,35-59,18-34,200120,2626,True
+S005-001,S005-003,S005,No transmission,Positive,Negative,35-59,<5,108280,1760,True
+S005-002,S005-003,S005,Both negative,Negative,Negative,18-34,<5,46160,886,True
+S006-001,S006-003,S006,No transmission,Positive,Negative,35-59,35-59,7640,138,True
+S006-001,S006-004,S006,No transmission,Positive,Negative,35-59,18-34,13160,308,True
+S006-001,S006-006,S006,Transmission,Positive,Positive,35-59,18-34,1600,54,True
+S006-001,S006-008,S006,No transmission,Positive,Negative,35-59,18-34,28680,650,True
+S006-001,S006-010,S006,Transmission,Positive,Positive,35-59,12-May,4680,72,True
+S006-003,S006-004,S006,Both negative,Negative,Negative,35-59,18-34,1880,68,True
+S006-003,S006-006,S006,No transmission,Negative,Positive,35-59,18-34,2280,82,True
+S006-003,S006-008,S006,Both negative,Negative,Negative,35-59,18-34,13680,354,True
+S006-003,S006-010,S006,No transmission,Negative,Positive,35-59,12-May,1400,42,True
+S006-004,S006-006,S006,No transmission,Negative,Positive,18-34,18-34,6560,36,True
+S006-004,S006-008,S006,Both negative,Negative,Negative,18-34,18-34,9480,226,True
+S006-004,S006-010,S006,No transmission,Negative,Positive,18-34,12-May,1240,44,True
+S006-006,S006-008,S006,No transmission,Positive,Negative,18-34,18-34,9400,210,True
+S006-006,S006-010,S006,Transmission,Positive,Positive,18-34,12-May,1840,50,True
+S006-008,S006-010,S006,No transmission,Negative,Positive,18-34,12-May,7040,138,True
+S007-001,S007-002,S007,Transmission,Positive,Positive,35-59,35-59,2000,58,True
+S007-001,S007-003,S007,No transmission,Positive,Negative,35-59,35-59,8320,206,True
+S007-001,S007-004,S007,Transmission,Positive,Positive,35-59,35-59,13600,332,True
+S007-001,S007-005,S007,No transmission,Positive,Negative,35-59,35-59,4240,94,True
+S007-001,S007-006,S007,No transmission,Positive,Negative,35-59,35-59,6280,174,True
+S007-001,S007-007,S007,Transmission,Positive,Positive,35-59,13-17,3520,102,True
+S007-001,S007-008,S007,Transmission,Positive,Positive,35-59,13-17,2520,36,True
+S007-002,S007-003,S007,No transmission,Positive,Negative,35-59,35-59,2400,60,True
+S007-002,S007-004,S007,Transmission,Positive,Positive,35-59,35-59,240,8,True
+S007-002,S007-005,S007,No transmission,Positive,Negative,35-59,35-59,8560,184,True
+S007-002,S007-006,S007,No transmission,Positive,Negative,35-59,35-59,6800,144,True
+S007-002,S007-007,S007,Transmission,Positive,Positive,35-59,13-17,1960,52,True
+S007-002,S007-008,S007,Transmission,Positive,Positive,35-59,13-17,680,20,True
+S007-003,S007-004,S007,No transmission,Negative,Positive,35-59,35-59,13080,330,True
+S007-003,S007-005,S007,Both negative,Negative,Negative,35-59,35-59,5120,102,True
+S007-003,S007-006,S007,Both negative,Negative,Negative,35-59,35-59,49120,702,True
+S007-003,S007-007,S007,No transmission,Negative,Positive,35-59,13-17,720,14,True
+S007-003,S007-008,S007,No transmission,Negative,Positive,35-59,13-17,400,18,True
+S007-004,S007-005,S007,No transmission,Positive,Negative,35-59,35-59,1320,38,True
+S007-004,S007-006,S007,No transmission,Positive,Negative,35-59,35-59,3080,100,True
+S007-004,S007-007,S007,Transmission,Positive,Positive,35-59,13-17,1520,44,True
+S007-004,S007-008,S007,Transmission,Positive,Positive,35-59,13-17,40,2,True
+S007-005,S007-006,S007,Both negative,Negative,Negative,35-59,35-59,20080,408,True
+S007-005,S007-007,S007,No transmission,Negative,Positive,35-59,13-17,1920,32,True
+S007-005,S007-008,S007,No transmission,Negative,Positive,35-59,13-17,120,4,True
+S007-006,S007-007,S007,No transmission,Negative,Positive,35-59,13-17,1120,40,True
+S007-006,S007-008,S007,No transmission,Negative,Positive,35-59,13-17,400,10,True
+S007-007,S007-008,S007,Transmission,Positive,Positive,13-17,13-17,1800,52,True
+S008-001,S008-002,S008,No transmission,Positive,Negative,18-34,18-34,14680,284,True
+S008-001,S008-003,S008,Transmission,Positive,Positive,18-34,12-May,40560,888,True
+S008-002,S008-003,S008,No transmission,Negative,Positive,18-34,12-May,12440,260,True
+S009-001,S009-002,S009,Transmission,Positive,Positive,35-59,18-34,2840,84,True
+S009-001,S009-003,S009,Transmission,Positive,Positive,35-59,13-17,320,10,True
+S009-002,S009-003,S009,Transmission,Positive,Positive,18-34,13-17,1840,52,True
+S011-001,S011-002,S011,Transmission,Positive,Positive,35-59,18-34,2920,116,True
+S011-001,S011-003,S011,Transmission,Positive,Positive,35-59,18-34,280,14,True
+S011-001,S011-004,S011,No transmission,Positive,Negative,35-59,12-May,24480,628,True
+S011-001,S011-005,S011,No transmission,Positive,Negative,35-59,12-May,21400,542,True
+S011-002,S011-003,S011,Transmission,Positive,Positive,18-34,18-34,160,8,True
+S011-002,S011-004,S011,No transmission,Positive,Negative,18-34,12-May,19280,490,True
+S011-002,S011-005,S011,No transmission,Positive,Negative,18-34,12-May,17160,426,True
+S011-003,S011-004,S011,No transmission,Positive,Negative,18-34,12-May,24840,60,True
+S011-003,S011-005,S011,No transmission,Positive,Negative,18-34,12-May,16760,108,True
+S011-004,S011-005,S011,Both negative,Negative,Negative,12-May,12-May,122520,1860,True
+S012-001,S012-002,S012,Transmission,Positive,Positive,35-59,35-59,10600,264,True
+S012-001,S012-003,S012,Transmission,Positive,Positive,35-59,13-17,3160,98,True
+S012-002,S012-003,S012,Transmission,Positive,Positive,35-59,13-17,3080,90,True
+S015-001,S015-002,S015,Transmission,Positive,Positive,35-59,60,800,40,True
+S015-001,S015-003,S015,Transmission,Positive,Positive,35-59,13-17,9680,262,True
+S015-001,S015-004,S015,Transmission,Positive,Positive,35-59,35-59,4640,132,True
+S015-002,S015-003,S015,Transmission,Positive,Positive,60,13-17,12040,196,True
+S015-002,S015-004,S015,Transmission,Positive,Positive,60,35-59,7320,122,True
+S015-003,S015-004,S015,Transmission,Positive,Positive,13-17,35-59,9240,114,True
+S016-001,S016-002,S016,Transmission,Positive,Positive,35-59,18-34,10720,252,True
+S016-001,S016-003,S016,No transmission,Positive,Negative,35-59,12-May,20320,460,True
+S016-002,S016-003,S016,No transmission,Positive,Negative,18-34,12-May,22520,566,True
+S018-001,S018-003,S018,Transmission,Positive,Positive,35-59,18-34,101160,320,True
+S018-001,S018-004,S018,Transmission,Positive,Positive,35-59,13-17,29200,90,True
+S018-001,S018-005,S018,Transmission,Positive,Positive,35-59,12-May,23640,318,True
+S018-003,S018-004,S018,Transmission,Positive,Positive,18-34,13-17,59040,234,True
+S018-003,S018-005,S018,Transmission,Positive,Positive,18-34,12-May,33240,292,True
+S018-004,S018-005,S018,Transmission,Positive,Positive,13-17,12-May,16320,142,True
+S020-001,S020-002,S020,No transmission,Positive,Negative,18-34,18-34,1640,34,True
+S021-001,S021-002,S021,Transmission,Positive,Positive,35-59,60,1200,50,True
+S021-001,S021-003,S021,No transmission,Positive,Negative,35-59,60,760,26,True
+S021-001,S021-004,S021,Transmission,Positive,Positive,35-59,35-59,840,30,True
+S021-001,S021-005,S021,No transmission,Positive,Negative,35-59,18-34,7720,244,True
+S021-001,S021-006,S021,No transmission,Positive,Negative,35-59,13-17,6320,152,True
+S021-002,S021-003,S021,No transmission,Positive,Negative,60,60,3320,68,True
+S021-002,S021-004,S021,Transmission,Positive,Positive,60,35-59,360,18,True
+S021-002,S021-005,S021,No transmission,Positive,Negative,60,18-34,5760,132,True
+S021-002,S021-006,S021,No transmission,Positive,Negative,60,13-17,600,26,True
+S021-003,S021-004,S021,No transmission,Negative,Positive,60,35-59,1600,56,True
+S021-003,S021-005,S021,Both negative,Negative,Negative,60,18-34,9320,308,True
+S021-003,S021-006,S021,Both negative,Negative,Negative,60,13-17,3760,108,True
+S021-004,S021-005,S021,No transmission,Positive,Negative,35-59,18-34,760,28,True
+S021-004,S021-006,S021,No transmission,Positive,Negative,35-59,13-17,800,34,True
+S021-005,S021-006,S021,Both negative,Negative,Negative,18-34,13-17,14600,352,True
+S023-001,S023-002,S023,Transmission,Positive,Positive,35-59,35-59,77760,1376,True
+S023-001,S023-003,S023,Transmission,Positive,Positive,35-59,18-34,6280,112,True
+S023-002,S023-003,S023,Transmission,Positive,Positive,35-59,18-34,9160,202,True
+S026-001,S026-003,S026,Transmission,Positive,Positive,18-34,18-34,86960,1140,True
+S026-001,S026-005,S026,No transmission,Positive,Negative,18-34,13-17,15240,336,True
+S026-001,S026-007,S026,No transmission,Positive,Negative,18-34,18-34,520,16,True
+S026-001,S026-008,S026,No transmission,Positive,Negative,18-34,12-May,24040,776,True
+S026-001,S026-009,S026,No transmission,Positive,Negative,18-34,13-17,26520,658,True
+S026-003,S026-005,S026,No transmission,Positive,Negative,18-34,13-17,31760,446,True
+S026-003,S026-007,S026,No transmission,Positive,Negative,18-34,18-34,40,2,True
+S026-003,S026-008,S026,No transmission,Positive,Negative,18-34,12-May,28960,694,True
+S026-003,S026-009,S026,No transmission,Positive,Negative,18-34,13-17,26200,520,True
+S026-005,S026-008,S026,Both negative,Negative,Negative,13-17,12-May,5840,184,True
+S026-005,S026-009,S026,Both negative,Negative,Negative,13-17,13-17,7560,164,True
+S026-007,S026-008,S026,Both negative,Negative,Negative,18-34,12-May,1040,44,True
+S026-007,S026-009,S026,Both negative,Negative,Negative,18-34,13-17,1640,30,True
+S026-008,S026-009,S026,Both negative,Negative,Negative,12-May,13-17,43480,982,True
+S028-001,S028-002,S028,No transmission,Positive,Negative,35-59,35-59,79240,1200,True
+S028-001,S028-003,S028,No transmission,Positive,Negative,35-59,60,520,18,True
+S028-001,S028-004,S028,Transmission,Positive,Positive,35-59,12-May,91400,1088,True
+S028-001,S028-005,S028,Transmission,Positive,Positive,35-59,18-34,11360,290,True
+S028-002,S028-003,S028,Both negative,Negative,Negative,35-59,60,7800,262,True
+S028-002,S028-004,S028,No transmission,Negative,Positive,35-59,12-May,84640,1522,True
+S028-002,S028-005,S028,No transmission,Negative,Positive,35-59,18-34,23400,458,True
+S028-003,S028-004,S028,No transmission,Negative,Positive,60,12-May,9080,222,True
+S028-003,S028-005,S028,No transmission,Negative,Positive,60,18-34,6240,222,True
+S028-004,S028-005,S028,Transmission,Positive,Positive,12-May,18-34,95040,1490,True
+S030-001,S030-002,S030,No transmission,Positive,Negative,60,35-59,23280,570,True
+S031-001,S031-002,S031,No transmission,Positive,Negative,18-34,18-34,1840,44,True
+S031-001,S031-003,S031,No transmission,Positive,Negative,18-34,18-34,3600,110,True
+S031-001,S031-005,S031,Transmission,Positive,Positive,18-34,<5,1520,40,True
+S031-002,S031-003,S031,Both negative,Negative,Negative,18-34,18-34,840,6,True
+S031-003,S031-005,S031,No transmission,Negative,Positive,18-34,<5,240,8,True
+S032-001,S032-005,S032,No transmission,Positive,Negative,18-34,18-34,2560,84,True
+S033-001,S033-003,S033,Transmission,Positive,Positive,35-59,18-34,4160,130,True
+S033-001,S033-004,S033,Transmission,Positive,Positive,35-59,13-17,7000,214,True
+S033-002,S033-003,S033,No transmission,Negative,Positive,35-59,18-34,240,10,True
+S033-003,S033-004,S033,Transmission,Positive,Positive,18-34,13-17,23000,564,True
+S036-001,S036-002,S036,Transmission,Positive,Positive,60,18-34,4320,124,True
+S036-001,S036-003,S036,No transmission,Positive,Negative,60,<5,51600,1206,True
+S036-001,S036-004,S036,Transmission,Positive,Positive,60,<5,36960,914,True
+S036-002,S036-003,S036,No transmission,Positive,Negative,18-34,<5,7320,154,True
+S036-002,S036-004,S036,Transmission,Positive,Positive,18-34,<5,5400,146,True
+S036-003,S036-004,S036,No transmission,Negative,Positive,<5,<5,82880,2152,True
+S039-001,S039-002,S039,Transmission,Positive,Positive,35-59,35-59,1640,38,True
+S039-001,S039-003,S039,Transmission,Positive,Positive,35-59,12-May,440,18,True
+S039-001,S039-004,S039,Transmission,Positive,Positive,35-59,18-34,320,14,True
+S039-002,S039-003,S039,Transmission,Positive,Positive,35-59,12-May,5000,136,True
+S039-002,S039-004,S039,Transmission,Positive,Positive,35-59,18-34,3040,78,True
+S039-003,S039-004,S039,Transmission,Positive,Positive,12-May,18-34,13200,374,True
+S040-001,S040-002,S040,Transmission,Positive,Positive,60,60,320,12,True
+S040-001,S040-003,S040,Transmission,Positive,Positive,60,13-17,12200,290,True
+S040-001,S040-004,S040,Transmission,Positive,Positive,60,12-May,1960,76,True
+S040-002,S040-003,S040,Transmission,Positive,Positive,60,13-17,760,22,True
+S040-002,S040-004,S040,Transmission,Positive,Positive,60,12-May,280,8,True
+S040-003,S040-004,S040,Transmission,Positive,Positive,13-17,12-May,41400,838,True
+S044-001,S044-002,S044,No transmission,Positive,Negative,35-59,35-59,5760,120,True
+S044-001,S044-003,S044,Transmission,Positive,Positive,35-59,13-17,7000,206,True
+S044-002,S044-003,S044,No transmission,Negative,Positive,35-59,13-17,10600,314,True
+S045-001,S045-002,S045,Transmission,Positive,Positive,35-59,60,200,8,True
+S045-001,S045-003,S045,Transmission,Positive,Positive,35-59,60,640,16,True
+S045-001,S045-004,S045,No transmission,Positive,Negative,35-59,35-59,600,18,True
+S045-001,S045-005,S045,Transmission,Positive,Positive,35-59,35-59,3520,98,True
+S045-001,S045-006,S045,Transmission,Positive,Positive,35-59,12-May,2120,62,True
+S045-002,S045-003,S045,Transmission,Positive,Positive,60,60,3800,46,True
+S045-002,S045-004,S045,No transmission,Positive,Negative,60,35-59,240,4,True
+S045-002,S045-005,S045,Transmission,Positive,Positive,60,35-59,800,20,True
+S045-002,S045-006,S045,Transmission,Positive,Positive,60,12-May,1240,30,True
+S045-003,S045-004,S045,No transmission,Positive,Negative,60,35-59,840,22,True
+S045-003,S045-005,S045,Transmission,Positive,Positive,60,35-59,320,10,True
+S045-003,S045-006,S045,Transmission,Positive,Positive,60,12-May,4160,58,True
+S045-004,S045-005,S045,No transmission,Negative,Positive,35-59,35-59,240,12,True
+S045-004,S045-006,S045,No transmission,Negative,Positive,35-59,12-May,480,12,True
+S045-005,S045-006,S045,Transmission,Positive,Positive,35-59,12-May,1720,54,True
+S046-001,S046-002,S046,Transmission,Positive,Positive,60,35-59,3400,104,True
+S047-001,S047-003,S047,No transmission,Positive,Negative,35-59,<5,8720,250,True
+S048-001,S048-002,S048,Transmission,Positive,Positive,60,35-59,12400,160,True
+S048-002,S048-005,S048,Transmission,Positive,Positive,35-59,18-34,120,2,True
+S048-005,S048-006,S048,Transmission,Positive,Positive,18-34,18-34,80,4,True
+S049-001,S049-003,S049,No transmission,Positive,Negative,60,35-59,1720,74,True
+S049-001,S049-005,S049,No transmission,Positive,Negative,60,35-59,680,28,True
+S049-003,S049-004,S049,Both negative,Negative,Negative,35-59,12-May,7480,202,True
+S049-003,S049-005,S049,Both negative,Negative,Negative,35-59,35-59,1160,42,True
+S050-001,S050-002,S050,No transmission,Positive,Negative,18-34,60,6560,116,True
+S050-001,S050-003,S050,Transmission,Positive,Positive,18-34,35-59,3160,84,True
+S050-001,S050-004,S050,Transmission,Positive,Positive,18-34,18-34,2160,56,True
+S050-001,S050-005,S050,No transmission,Positive,Negative,18-34,12-May,8680,200,True
+S050-002,S050-003,S050,No transmission,Negative,Positive,60,35-59,5800,96,True
+S050-002,S050-004,S050,No transmission,Negative,Positive,60,18-34,3160,64,True
+S050-002,S050-005,S050,Both negative,Negative,Negative,60,12-May,33400,674,True
+S050-003,S050-004,S050,Transmission,Positive,Positive,35-59,18-34,8320,130,True
+S050-003,S050-005,S050,No transmission,Positive,Negative,35-59,12-May,3400,80,True
+S050-004,S050-005,S050,No transmission,Positive,Negative,18-34,12-May,5040,86,True
+S051-001,S051-004,S051,No transmission,Positive,Negative,35-59,18-34,120,6,True
+S052-001,S052-002,S052,Transmission,Positive,Positive,35-59,13-17,840,32,True
+S052-001,S052-003,S052,No transmission,Positive,Negative,35-59,12-May,80,2,True
+S052-002,S052-003,S052,No transmission,Positive,Negative,13-17,12-May,720,14,True
+S053-001,S053-002,S053,Transmission,Positive,Positive,60,35-59,7400,92,True
+S053-001,S053-003,S053,Transmission,Positive,Positive,60,35-59,8040,136,True
+S053-002,S053-003,S053,Transmission,Positive,Positive,35-59,35-59,2360,36,True
+S056-001,S056-003,S056,Transmission,Positive,Positive,35-59,18-34,15280,418,True
+S056-001,S056-004,S056,Transmission,Positive,Positive,35-59,13-17,21120,532,True
+S056-003,S056-004,S056,Transmission,Positive,Positive,18-34,13-17,17680,318,True
+S057-001,S057-002,S057,Transmission,Positive,Positive,35-59,18-34,4240,104,True
+S057-001,S057-003,S057,Transmission,Positive,Positive,35-59,12-May,480,18,True
+S057-002,S057-003,S057,Transmission,Positive,Positive,18-34,12-May,16040,358,True
+S057-002,S057-004,S057,No transmission,Positive,Negative,18-34,<5,12200,322,True
+S057-003,S057-004,S057,No transmission,Positive,Negative,12-May,<5,54960,1266,True
+S060-001,S060-002,S060,No transmission,Positive,Negative,18-34,35-59,10320,276,True
+S060-001,S060-003,S060,No transmission,Positive,Negative,18-34,35-59,3160,56,True
+S060-001,S060-004,S060,No transmission,Positive,Negative,18-34,12-May,34480,440,True
+S060-002,S060-003,S060,Both negative,Negative,Negative,35-59,35-59,12560,416,True
+S060-002,S060-004,S060,Both negative,Negative,Negative,35-59,12-May,64640,1426,True
+S060-003,S060-004,S060,Both negative,Negative,Negative,35-59,12-May,33520,950,True
+S061-001,S061-002,S061,Transmission,Positive,Positive,60,35-59,200,8,True
+S061-001,S061-003,S061,Transmission,Positive,Positive,60,35-59,720,28,True
+S061-001,S061-004,S061,Transmission,Positive,Positive,60,35-59,840,30,True
+S061-001,S061-005,S061,Transmission,Positive,Positive,60,12-May,5800,126,True
+S061-002,S061-003,S061,Transmission,Positive,Positive,35-59,35-59,4680,110,True
+S061-002,S061-004,S061,Transmission,Positive,Positive,35-59,35-59,3160,94,True
+S061-002,S061-005,S061,Transmission,Positive,Positive,35-59,12-May,10200,226,True
+S061-003,S061-004,S061,Transmission,Positive,Positive,35-59,35-59,8760,202,True
+S061-003,S061-005,S061,Transmission,Positive,Positive,35-59,12-May,82000,1374,True
+S061-004,S061-005,S061,Transmission,Positive,Positive,35-59,12-May,44280,784,True
+S062-001,S062-002,S062,Transmission,Positive,Positive,18-34,35-59,1960,50,True
+S062-001,S062-003,S062,Transmission,Positive,Positive,18-34,18-34,1120,38,True
+S062-001,S062-005,S062,No transmission,Positive,Negative,18-34,35-59,1280,34,True
+S062-001,S062-007,S062,Transmission,Positive,Positive,18-34,18-34,520,12,True
+S062-002,S062-003,S062,Transmission,Positive,Positive,35-59,18-34,680,30,True
+S062-002,S062-005,S062,No transmission,Positive,Negative,35-59,35-59,40,2,True
+S062-003,S062-005,S062,No transmission,Positive,Negative,18-34,35-59,12840,398,True
+S062-003,S062-007,S062,Transmission,Positive,Positive,18-34,18-34,6800,128,True
+S062-005,S062-007,S062,No transmission,Negative,Positive,35-59,18-34,2440,68,True
+S063-001,S063-003,S063,Transmission,Positive,Positive,18-34,35-59,8280,86,True
+S063-001,S063-004,S063,Transmission,Positive,Positive,18-34,13-17,7040,84,True
+S063-002,S063-003,S063,Transmission,Positive,Positive,35-59,35-59,57720,336,True
+S063-002,S063-004,S063,Transmission,Positive,Positive,35-59,13-17,2280,38,True
+S063-003,S063-004,S063,Transmission,Positive,Positive,35-59,13-17,4960,54,True
+S064-001,S064-002,S064,Transmission,Positive,Positive,60,35-59,2880,80,True
+S064-001,S064-004,S064,Transmission,Positive,Positive,60,35-59,160,6,True
+S064-002,S064-004,S064,Transmission,Positive,Positive,35-59,35-59,1200,48,True
+S067-001,S067-002,S067,Transmission,Positive,Positive,35-59,18-34,2040,28,True
+S067-001,S067-003,S067,Transmission,Positive,Positive,35-59,35-59,120,6,True
+S067-001,S067-004,S067,No transmission,Positive,Negative,35-59,18-34,440,8,True
+S067-002,S067-003,S067,Transmission,Positive,Positive,18-34,35-59,1720,52,True
+S067-002,S067-004,S067,No transmission,Positive,Negative,18-34,18-34,720,16,True
+S067-003,S067-004,S067,No transmission,Positive,Negative,35-59,18-34,10920,332,True
+S070-001,S070-002,S070,Transmission,Positive,Positive,60,35-59,3880,96,True
+S070-001,S070-003,S070,Transmission,Positive,Positive,60,35-59,1320,54,True
+S070-002,S070-003,S070,Transmission,Positive,Positive,35-59,35-59,16760,358,True
+S071-001,S071-002,S071,Transmission,Positive,Positive,60,60,3720,126,True
+S071-001,S071-004,S071,Transmission,Positive,Positive,60,13-17,40,2,True
+S071-001,S071-006,S071,Transmission,Positive,Positive,60,12-May,80,2,True
+S071-001,S071-008,S071,Transmission,Positive,Positive,60,12-May,40,2,True
+S071-002,S071-004,S071,Transmission,Positive,Positive,60,13-17,4200,112,True
+S071-002,S071-005,S071,Transmission,Positive,Positive,60,12-May,280,12,True
+S071-002,S071-008,S071,Transmission,Positive,Positive,60,12-May,1200,36,True
+S071-004,S071-005,S071,Transmission,Positive,Positive,13-17,12-May,880,26,True
+S071-004,S071-008,S071,Transmission,Positive,Positive,13-17,12-May,520,8,True
+S071-005,S071-006,S071,Transmission,Positive,Positive,12-May,12-May,360,6,True
+S071-005,S071-008,S071,Transmission,Positive,Positive,12-May,12-May,680,28,True
+S071-006,S071-008,S071,Transmission,Positive,Positive,12-May,12-May,1080,20,True
+S072-001,S072-004,S072,Transmission,Positive,Positive,35-59,12-May,1240,40,True
+S072-001,S072-005,S072,Transmission,Positive,Positive,35-59,12-May,280,10,True
+S072-001,S072-006,S072,Transmission,Positive,Positive,35-59,12-May,1600,54,True
+S072-001,S072-007,S072,Transmission,Positive,Positive,35-59,12-May,240,12,True
+S072-001,S072-008,S072,No transmission,Positive,Negative,35-59,35-59,8000,136,True
+S072-004,S072-005,S072,Transmission,Positive,Positive,12-May,12-May,15320,220,True
+S072-004,S072-006,S072,Transmission,Positive,Positive,12-May,12-May,123560,1986,True
+S072-004,S072-007,S072,Transmission,Positive,Positive,12-May,12-May,12920,188,True
+S072-004,S072-008,S072,No transmission,Positive,Negative,12-May,35-59,5440,118,True
+S072-005,S072-006,S072,Transmission,Positive,Positive,12-May,12-May,23080,334,True
+S072-005,S072-007,S072,Transmission,Positive,Positive,12-May,12-May,17080,236,True
+S072-005,S072-008,S072,No transmission,Positive,Negative,12-May,35-59,840,24,True
+S072-006,S072-007,S072,Transmission,Positive,Positive,12-May,12-May,13720,220,True
+S072-006,S072-008,S072,No transmission,Positive,Negative,12-May,35-59,17280,334,True
+S072-007,S072-008,S072,No transmission,Positive,Negative,12-May,35-59,2760,40,True
+S073-001,S073-002,S073,Transmission,Positive,Positive,35-59,35-59,1520,54,True
+S073-001,S073-004,S073,Transmission,Positive,Positive,35-59,13-17,1040,32,True
+S073-002,S073-003,S073,Transmission,Positive,Positive,35-59,18-34,13400,192,True
+S073-002,S073-004,S073,Transmission,Positive,Positive,35-59,13-17,69720,1426,True
+S073-003,S073-004,S073,Transmission,Positive,Positive,18-34,13-17,10520,184,True
+S074-001,S074-002,S074,Transmission,Positive,Positive,35-59,35-59,2680,86,True
+S074-001,S074-003,S074,Transmission,Positive,Positive,35-59,18-34,120,4,True
+S074-001,S074-004,S074,Transmission,Positive,Positive,35-59,12-May,15400,320,True
+S074-002,S074-003,S074,Transmission,Positive,Positive,35-59,18-34,280,4,True
+S074-002,S074-004,S074,Transmission,Positive,Positive,35-59,12-May,5240,144,True
+S074-003,S074-004,S074,Transmission,Positive,Positive,18-34,12-May,640,8,True
+S075-001,S075-002,S075,Transmission,Positive,Positive,35-59,60,2080,60,True
+S075-001,S075-003,S075,Transmission,Positive,Positive,35-59,35-59,1160,30,True
+S075-001,S075-004,S075,Transmission,Positive,Positive,35-59,18-34,12320,222,True
+S075-002,S075-003,S075,Transmission,Positive,Positive,60,35-59,4160,72,True
+S075-002,S075-004,S075,Transmission,Positive,Positive,60,18-34,3760,52,True
+S075-003,S075-004,S075,Transmission,Positive,Positive,35-59,18-34,6000,58,True
+S078-001,S078-002,S078,No transmission,Positive,Negative,60,18-34,2520,100,True
+S078-001,S078-003,S078,No transmission,Positive,Negative,60,12-May,5080,118,True
+S078-002,S078-003,S078,Both negative,Negative,Negative,18-34,12-May,34680,516,True
+S079-001,S079-003,S079,Transmission,Positive,Positive,35-59,60,8200,170,True
+S079-001,S079-004,S079,Transmission,Positive,Positive,35-59,18-34,20000,358,True
+S079-001,S079-005,S079,Transmission,Positive,Positive,35-59,13-17,2720,86,True
+S079-001,S079-006,S079,Transmission,Positive,Positive,35-59,12-May,29000,686,True
+S079-003,S079-004,S079,Transmission,Positive,Positive,60,18-34,8800,130,True
+S079-003,S079-005,S079,Transmission,Positive,Positive,60,13-17,4800,80,True
+S079-003,S079-006,S079,Transmission,Positive,Positive,60,12-May,18280,406,True
+S079-004,S079-005,S079,Transmission,Positive,Positive,18-34,13-17,6200,146,True
+S079-004,S079-006,S079,Transmission,Positive,Positive,18-34,12-May,29960,612,True
+S079-005,S079-006,S079,Transmission,Positive,Positive,13-17,12-May,23880,638,True
+S080-001,S080-002,S080,No transmission,Positive,Negative,18-34,35-59,70480,690,True
+S080-001,S080-003,S080,No transmission,Positive,Negative,18-34,35-59,17000,300,True
+S080-002,S080-003,S080,Both negative,Negative,Negative,35-59,35-59,172160,2734,True
+S081-001,S081-003,S081,No transmission,Positive,Negative,35-59,13-17,3000,64,True

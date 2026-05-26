@@ -1,0 +1,60 @@
+{
+  "dataset_name": "SASHTS \u2013 South Africa Household Transmission Study",
+  "files": [
+    "sashts_contact_network.csv",
+    "sashts_metadata.csv"
+  ],
+  "n_nodes": 340,
+  "n_edges": 542,
+  "n_raw_proximity_events": 140542,
+  "is_directed": false,
+  "is_weighted": true,
+  "weight_column": "total_duration_sec (aggregated contact duration per pair)",
+  "has_timestamp": "Partial \u2013 Soweto only (no_ts=0)",
+  "n_components": 88,
+  "component_note": "Each component = 1 household (no cross-HH edges)",
+  "household_size_dist": {
+    "2": 13,
+    "3": 27,
+    "4": 22,
+    "5": 14,
+    "6": 10,
+    "7": 1,
+    "8": 1
+  },
+  "avg_household_size": 3.8636363636363638,
+  "density": 0.009404823876453236,
+  "avg_degree": 3.1882352941176473,
+  "max_degree": 7,
+  "n_sars_positive": 241,
+  "n_sars_negative": 99,
+  "attack_rate_overall_pct": 70.9,
+  "n_index_cases": 88,
+  "n_transmission_edges": 286,
+  "n_non_transmission_edges": 256,
+  "sites": {
+    "Soweto": 197,
+    "Klerksdorp": 143
+  },
+  "variants": {
+    "Beta": 171,
+    "Delta": 38,
+    "Variant Unknown": 16,
+    "non-Alpha/Beta/Delta": 14,
+    "Alpha": 13
+  },
+  "node_features_available": [
+    "site",
+    "agegrp9",
+    "sex",
+    "sars",
+    "index",
+    "sus",
+    "bmicat",
+    "smokecignow1",
+    "sleep_room_ix",
+    "cared_by_ix",
+    "ixesarsvarf1",
+    "hh_ar"
+  ]
+}
