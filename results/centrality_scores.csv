@@ -1,0 +1,341 @@
+node_id,hhid,site,sars,is_index,agegrp9,sex,degree,degree_centrality,weighted_degree_sec,betweenness_centrality,closeness_centrality,sleep_room_ix,cared_by_ix,sus,bmicat,hh_ar,louvain_community_id
+J008-005,J008,Klerksdorp,Positive,0,12-May,Female,5,1.0,112040,0.5,6.420133538777607e-05,Yes,No,Susceptible,Normal weight,0,0
+J008-007,J008,Klerksdorp,Negative,0,18-34,Female,5,1.0,135080,0.0,4.602356406480118e-05,Yes,No,Susceptible,Normal weight,0,0
+J008-006,J008,Klerksdorp,Positive,0,13-17,Female,5,1.0,192520,0.0,3.2316442605997934e-05,Yes,No,Susceptible,Normal weight,0,0
+J008-002,J008,Klerksdorp,Negative,0,35-59,Male,5,1.0,90160,0.5,6.420133538777607e-05,No,No,Susceptible,Overweight,0,0
+J008-001,J008,Klerksdorp,Positive,1,18-34,Female,5,1.0,215240,0.0,3.171783811215428e-05,Unknown,No,,Obese,0,0
+J008-004,J008,Klerksdorp,Positive,0,<5,Male,5,1.0,275360,0.0,3.08870768470472e-05,Yes,Yes,Susceptible,Normal weight,0,0
+J009-001,J009,Klerksdorp,Positive,1,35-59,Female,1,1.0,24840,0.0,4.025764895330113e-05,Unknown,No,,Obese,0,1
+J009-002,J009,Klerksdorp,Positive,0,60,Male,1,1.0,24840,0.0,4.025764895330113e-05,Yes,No,Susceptible,Normal weight,0,1
+J010-003,J010,Klerksdorp,Negative,0,18-34,Female,2,1.0,30800,0.0,0.0023809523809523,No,No,Susceptible,Overweight,0,2
+J010-002,J010,Klerksdorp,Negative,0,60,Female,2,1.0,31400,0.0,0.0013888888888888,No,No,Susceptible,Normal weight,0,2
+J010-001,J010,Klerksdorp,Positive,1,18-34,Male,2,1.0,760,1.0,0.0026315789473684,Unknown,No,,Normal weight,0,2
+J020-006,J020,Klerksdorp,Negative,0,12-May,Male,4,1.0,13640,0.6666666666666666,0.0008196721311475,No,No,Susceptible,Overweight,0,3
+J020-003,J020,Klerksdorp,Negative,0,60,Male,4,1.0,27360,0.0,0.0004950495049504,No,No,Susceptible,Normal weight,0,3
+J020-007,J020,Klerksdorp,Positive,0,13-17,Male,4,1.0,11480,0.5,0.0007692307692307,No,No,Susceptible,Normal weight,0,3
+J020-001,J020,Klerksdorp,Positive,1,18-34,Male,4,1.0,6640,0.5,0.0008064516129032,Unknown,No,,Normal weight,0,3
+J020-002,J020,Klerksdorp,Positive,0,60,Female,4,1.0,38080,0.0,0.0002793296089385,No,No,Susceptible,Obese,0,3
+J021-001,J021,Klerksdorp,Positive,1,35-59,Female,2,1.0,17280,0.0,0.0002702702702702,Unknown,No,,Unknown,0,4
+J021-002,J021,Klerksdorp,Negative,0,18-34,Female,2,1.0,5680,1.0,0.0003521126760563,No,No,Susceptible,Unknown,0,4
+J021-003,J021,Klerksdorp,Negative,0,<5,Male,2,1.0,19520,0.0,0.000207468879668,Yes,No,Susceptible,Unknown,0,4
+J022-003,J022,Klerksdorp,Negative,0,12-May,Female,2,1.0,44200,0.0,4.524886877828054e-05,No,No,Susceptible,Normal weight,0,5
+J022-004,J022,Klerksdorp,Negative,0,13-17,Male,2,1.0,27120,0.0,7.374631268436578e-05,No,No,Susceptible,Normal weight,0,5
+J022-001,J022,Klerksdorp,Positive,1,35-59,Male,2,1.0,31160,0.0,6.418485237483954e-05,Unknown,No,,Overweight,0,5
+J023-005,J023,Klerksdorp,Negative,0,18-34,Male,5,1.0,96800,0.0,0.0001491646778042,No,No,Susceptible,Normal weight,0,6
+J023-002,J023,Klerksdorp,Negative,0,60,Female,5,1.0,63320,0.0,0.0001614987080103,No,No,Susceptible,Obese,0,6
+J023-008,J023,Klerksdorp,Negative,0,12-May,Male,5,1.0,178840,0.0,9.231905465288036e-05,No,No,Susceptible,Normal weight,0,6
+J023-004,J023,Klerksdorp,Negative,0,18-34,Male,5,1.0,104200,0.0,0.0001598465473145,No,No,Susceptible,Normal weight,0,6
+J023-001,J023,Klerksdorp,Positive,1,18-34,Male,5,1.0,21040,1.0,0.0002376425855513,Unknown,No,,Obese,0,6
+J023-006,J023,Klerksdorp,Positive,0,13-17,Female,5,1.0,194520,0.0,0.0001267748478701,No,No,Susceptible,Obese,0,6
+J024-004,J024,Klerksdorp,Negative,0,13-17,Male,2,1.0,1280,0.0,0.0015625,No,No,Susceptible,Normal weight,0,7
+J024-002,J024,Klerksdorp,Negative,0,35-59,Male,2,1.0,1440,0.0,0.0013888888888888,Yes,No,Susceptible,Normal weight,0,7
+J024-001,J024,Klerksdorp,Positive,1,35-59,Female,2,1.0,1360,0.0,0.0014705882352941,Unknown,No,,Obese,0,7
+J027-002,J027,Klerksdorp,Negative,0,35-59,Male,3,0.75,13920,0.0,0.0008333333333333,Yes,No,Susceptible,Normal weight,0,8
+J027-003,J027,Klerksdorp,Positive,0,35-59,Female,2,0.5,400,0.0,0.0020408163265306,No,No,Susceptible,Obese,0,8
+J027-001,J027,Klerksdorp,Positive,1,35-59,Female,4,1.0,12280,0.6666666666666666,0.0021739130434782,Unknown,No,,Obese,0,8
+J027-004,J027,Klerksdorp,Positive,0,18-34,Female,2,0.5,1280,0.3333333333333333,0.0018518518518518,No,No,Susceptible,Normal weight,0,8
+J027-005,J027,Klerksdorp,Negative,0,18-34,Male,3,0.75,1800,0.0,0.0018181818181818,No,No,Susceptible,Overweight,0,8
+J029-003,J029,Klerksdorp,Positive,0,13-17,Female,2,1.0,16120,1.0,0.0001240694789081,No,No,Susceptible,Normal weight,0,9
+J029-001,J029,Klerksdorp,Positive,1,35-59,Female,2,1.0,39520,0.0,8.460236886632826e-05,Unknown,No,,Normal weight,0,9
+J029-002,J029,Klerksdorp,Negative,0,35-59,Male,2,1.0,40600,0.0,8.090614886731392e-05,Yes,No,Susceptible,Overweight,0,9
+J030-001,J030,Klerksdorp,Positive,1,35-59,Male,2,1.0,50880,0.0,5.0658561296859166e-05,Unknown,No,,Underweight,0,10
+J030-003,J030,Klerksdorp,Negative,0,12-May,Male,2,1.0,45600,0.0,5.847953216374269e-05,No,No,Susceptible,Unknown,0,10
+J030-004,J030,Klerksdorp,Negative,0,12-May,Male,2,1.0,24560,1.0,8.143322475570033e-05,No,No,Susceptible,Normal weight,0,10
+J031-001,J031,Klerksdorp,Positive,1,60,Male,1,1.0,1080,0.0,0.0009259259259259,Unknown,No,,Overweight,0,11
+J031-002,J031,Klerksdorp,Negative,0,60,Female,1,1.0,1080,0.0,0.0009259259259259,Yes,No,Susceptible,Obese,0,11
+J033-001,J033,Klerksdorp,Positive,1,35-59,Female,4,1.0,25680,0.8333333333333333,0.0001663893510815,Unknown,No,,Obese,0,12
+J033-005,J033,Klerksdorp,Negative,0,13-17,Male,4,1.0,58280,0.5,0.0001524390243902,No,No,Susceptible,Normal weight,0,12
+J033-002,J033,Klerksdorp,Negative,0,60,Female,4,1.0,97400,0.0,9.615384615384615e-05,No,No,Susceptible,Obese,0,12
+J033-008,J033,Klerksdorp,Negative,0,12-May,Female,4,1.0,103760,0.0,0.0001533742331288,Yes,No,Susceptible,Overweight,0,12
+J033-007,J033,Klerksdorp,Negative,0,12-May,Female,4,1.0,202720,0.0,6.101281269066504e-05,No,No,Susceptible,Overweight,0,12
+J037-002,J037,Klerksdorp,Positive,0,35-59,Male,3,1.0,8800,0.3333333333333333,0.0003807106598984,Yes,No,Susceptible,Normal weight,0,13
+J037-001,J037,Klerksdorp,Positive,1,35-59,Female,3,1.0,17360,0.0,0.0002118644067796,Unknown,No,,Obese,0,13
+J037-003,J037,Klerksdorp,Positive,0,18-34,Female,3,1.0,11080,0.3333333333333333,0.0003807106598984,No,No,Susceptible,Obese,0,13
+J037-004,J037,Klerksdorp,Positive,0,12-May,Male,3,1.0,9400,0.0,0.0003537735849056,No,Yes,Susceptible,Normal weight,0,13
+J039-003,J039,Klerksdorp,Positive,0,18-34,Female,5,1.0,116760,0.0,5.580357142857143e-05,No,No,Susceptible,Obese,0,14
+J039-005,J039,Klerksdorp,Positive,0,13-17,Female,5,1.0,114080,0.3,0.0001363140676117,Yes,No,Susceptible,Normal weight,0,14
+J039-006,J039,Klerksdorp,Positive,0,13-17,Female,5,1.0,149280,0.0,6.883259911894274e-05,Yes,No,Susceptible,Normal weight,0,14
+J039-002,J039,Klerksdorp,Negative,0,35-59,Male,5,1.0,51360,0.1,0.0001366120218579,No,No,Susceptible,Underweight,0,14
+J039-007,J039,Klerksdorp,Positive,0,13-17,Male,5,1.0,51360,0.2,0.0001384274640088,No,No,Susceptible,Normal weight,0,14
+J039-001,J039,Klerksdorp,Positive,1,35-59,Female,5,1.0,43880,0.1,0.0001351351351351,Unknown,No,,Obese,0,14
+J041-002,J041,Klerksdorp,Positive,0,60,Male,4,1.0,79240,0.0,0.0003436426116838,No,No,Susceptible,Overweight,0,15
+J041-005,J041,Klerksdorp,Positive,0,13-17,Female,4,1.0,78760,0.0,0.0002487562189054,Yes,No,Susceptible,Overweight,0,15
+J041-003,J041,Klerksdorp,Positive,0,60,Female,4,1.0,89280,0.0,0.0001709401709401,No,No,Susceptible,Obese,0,15
+J041-001,J041,Klerksdorp,Positive,1,18-34,Female,4,1.0,64880,0.0,0.0002777777777777,Unknown,No,,Normal weight,0,15
+J041-004,J041,Klerksdorp,Negative,0,35-59,Male,4,1.0,9360,1.0,0.0004273504273504,No,No,Susceptible,Normal weight,0,15
+J042-003,J042,Klerksdorp,Positive,0,60,Female,2,1.0,18960,0.0,0.0001054852320675,No,No,Susceptible,Obese,0,16
+J042-004,J042,Klerksdorp,Negative,0,12-May,Male,2,1.0,12920,0.0,0.0001547987616099,No,No,Susceptible,Overweight,0,16
+J042-001,J042,Klerksdorp,Positive,1,35-59,Male,2,1.0,13960,0.0,0.0001432664756446,Unknown,No,,Normal weight,0,16
+J043-005,J043,Klerksdorp,Positive,0,12-May,Male,5,1.0,319600,0.0,0.0003709198813056,No,No,Susceptible,Normal weight,0,17
+J043-006,J043,Klerksdorp,Positive,0,12-May,Male,5,1.0,284160,0.4,0.0003943217665615,No,No,Susceptible,Normal weight,0,17
+J043-001,J043,Klerksdorp,Positive,1,18-34,Male,4,0.8,67680,0.0,8.509189925119128e-05,Unknown,No,,Normal weight,0,17
+J043-002,J043,Klerksdorp,Positive,0,18-34,Female,5,1.0,40000,0.0,0.0003993610223642,Yes,No,Susceptible,Overweight,0,17
+J043-003,J043,Klerksdorp,Positive,0,35-59,Female,5,1.0,133640,0.0,0.0003799392097264,No,No,Susceptible,Underweight,0,17
+J043-004,J043,Klerksdorp,Negative,0,18-34,Male,4,0.8,680,0.9,0.0004045307443365,No,No,Susceptible,Normal weight,0,17
+J044-003,J044,Klerksdorp,Positive,0,35-59,Female,6,1.0,24720,0.3333333333333333,0.0003211991434689,No,No,Susceptible,Obese,0,18
+J044-006,J044,Klerksdorp,Positive,0,13-17,Female,6,1.0,179120,0.0,9.079903147699756e-05,Yes,No,Susceptible,Normal weight,0,18
+J044-002,J044,Klerksdorp,Positive,0,35-59,Male,6,1.0,29640,0.4,0.0003296703296703,No,No,Susceptible,Obese,0,18
+J044-007,J044,Klerksdorp,Negative,0,12-May,Female,6,1.0,104840,0.0,0.0002164502164502,No,No,Susceptible,Normal weight,0,18
+J044-005,J044,Klerksdorp,Positive,0,18-34,Male,6,1.0,26720,0.0,0.0003260869565217,No,No,Susceptible,Normal weight,0,18
+J044-004,J044,Klerksdorp,Positive,0,18-34,Female,6,1.0,63480,0.0,0.0002542372881355,Yes,No,Susceptible,Normal weight,0,18
+J044-001,J044,Klerksdorp,Positive,1,18-34,Female,6,1.0,26440,0.4666666666666667,0.0003432494279176,Unknown,No,,Overweight,0,18
+J047-001,J047,Klerksdorp,Positive,1,18-34,Female,2,1.0,320,0.0,0.01,Unknown,No,,Obese,0,19
+J047-002,J047,Klerksdorp,Positive,0,35-59,Female,2,1.0,400,0.0,0.0071428571428571,No,No,Susceptible,Obese,0,19
+J047-003,J047,Klerksdorp,Positive,0,18-34,Male,2,1.0,160,1.0,0.0125,No,No,Susceptible,Normal weight,0,19
+J048-003,J048,Klerksdorp,Negative,0,13-17,Female,4,1.0,53520,0.3333333333333333,0.0001730103806228,No,No,Susceptible,Normal weight,0,20
+J048-005,J048,Klerksdorp,Negative,0,12-May,Female,4,1.0,58280,0.0,9.140767824497258e-05,No,No,Susceptible,Normal weight,0,20
+J048-002,J048,Klerksdorp,Negative,0,35-59,Female,4,1.0,39680,0.0,0.0001366120218579,No,No,Susceptible,Overweight,0,20
+J048-001,J048,Klerksdorp,Positive,1,60,Male,4,1.0,25720,0.5,0.0001883239171374,Unknown,No,,Normal weight,0,20
+J048-004,J048,Klerksdorp,Negative,0,13-17,Female,4,1.0,55760,0.0,0.0001177856301531,No,No,Susceptible,Normal weight,0,20
+J050-003,J050,Klerksdorp,Positive,0,18-34,Female,3,1.0,8080,0.6666666666666666,0.0003712871287128,No,No,Susceptible,Obese,0,21
+J050-001,J050,Klerksdorp,Positive,1,35-59,Female,3,1.0,19600,0.0,0.0002419354838709,Unknown,No,,Obese,0,21
+J050-002,J050,Klerksdorp,Positive,0,35-59,Female,3,1.0,12880,0.0,0.0002551020408163,Yes,No,Susceptible,Obese,0,21
+J050-004,J050,Klerksdorp,Positive,0,13-17,Female,3,1.0,16400,0.0,0.0002906976744186,Yes,Yes,Susceptible,Normal weight,0,21
+J053-002,J053,Klerksdorp,Negative,0,35-59,Female,2,1.0,92400,0.0,2.1645021645021645e-05,Yes,No,Susceptible,Obese,0,22
+J053-003,J053,Klerksdorp,Negative,0,<5,Female,2,1.0,107680,0.0,1.8573551263001484e-05,Yes,Yes,Susceptible,Normal weight,0,22
+J053-001,J053,Klerksdorp,Positive,1,18-34,Female,2,1.0,102800,0.0,1.945525291828794e-05,Unknown,No,,Obese,0,22
+J054-002,J054,Klerksdorp,Positive,0,35-59,Female,3,1.0,22080,0.0,0.0004285714285714,Yes,No,Susceptible,Obese,0,23
+J054-004,J054,Klerksdorp,Positive,0,13-17,Male,3,1.0,11480,0.0,0.0010869565217391,No,No,Susceptible,Normal weight,0,23
+J054-001,J054,Klerksdorp,Positive,1,35-59,Male,3,1.0,2680,1.0,0.0011194029850746,Unknown,No,,Obese,0,23
+J054-003,J054,Klerksdorp,Positive,0,18-34,Female,3,1.0,21120,0.0,0.0008241758241758,No,No,Susceptible,Obese,0,23
+J055-004,J055,Klerksdorp,Positive,0,12-May,Male,1,1.0,2760,0.0,0.0003623188405797,Yes,Yes,Susceptible,Normal weight,0,24
+J055-001,J055,Klerksdorp,Positive,1,35-59,Female,1,1.0,2760,0.0,0.0003623188405797,Unknown,No,,Obese,0,24
+J057-003,J057,Klerksdorp,Positive,0,18-34,Female,3,1.0,21360,0.6666666666666666,0.0002678571428571,No,No,Susceptible,Normal weight,0,25
+J057-001,J057,Klerksdorp,Positive,1,18-34,Female,3,1.0,12040,0.6666666666666666,0.0002678571428571,Unknown,No,,Obese,0,25
+J057-002,J057,Klerksdorp,Positive,0,18-34,Male,3,1.0,29560,0.0,0.0001893939393939,Yes,No,Susceptible,Overweight,0,25
+J057-004,J057,Klerksdorp,Positive,0,18-34,Female,3,1.0,32400,0.0,0.0001071428571428,No,No,Susceptible,Overweight,0,25
+J059-002,J059,Klerksdorp,Positive,0,13-17,Female,4,1.0,9960,0.0,0.0004504504504504,No,Yes,Susceptible,Overweight,0,26
+J059-005,J059,Klerksdorp,Negative,0,<5,Female,4,1.0,19320,0.0,0.0002710027100271,Yes,Yes,Susceptible,Normal weight,0,26
+J059-001,J059,Klerksdorp,Positive,1,35-59,Female,4,1.0,11040,0.1666666666666666,0.0005813953488372,Unknown,No,,Obese,0,26
+J059-003,J059,Klerksdorp,Positive,0,12-May,Female,4,1.0,13160,0.0,0.0003424657534246,No,Yes,Susceptible,Overweight,0,26
+J059-004,J059,Klerksdorp,Negative,0,<5,Male,4,1.0,6840,0.3333333333333333,0.0005847953216374,Yes,Yes,Susceptible,Normal weight,0,26
+J063-005,J063,Klerksdorp,Negative,0,12-May,Female,4,1.0,233920,0.0,4.587155963302752e-05,No,No,Susceptible,Normal weight,0,27
+J063-001,J063,Klerksdorp,Positive,1,18-34,Female,4,1.0,290680,0.0,4.101722723543888e-05,Unknown,No,,Normal weight,0,27
+J063-004,J063,Klerksdorp,Positive,0,13-17,Male,4,1.0,51080,1.0,7.830853563038371e-05,Yes,Yes,Susceptible,Normal weight,0,27
+J063-002,J063,Klerksdorp,Positive,0,35-59,Male,4,1.0,214920,0.0,3.9231071008238526e-05,No,No,Susceptible,Obese,0,27
+J063-003,J063,Klerksdorp,Positive,0,35-59,Female,4,1.0,182040,0.0,5.64334085778781e-05,No,No,Susceptible,Obese,0,27
+J064-003,J064,Klerksdorp,Positive,0,12-May,Male,2,1.0,37600,0.0,5.319148936170213e-05,No,Yes,Susceptible,Normal weight,0,28
+J064-001,J064,Klerksdorp,Positive,1,35-59,Male,2,1.0,51120,0.0,3.912363067292645e-05,Unknown,No,,Overweight,0,28
+J064-002,J064,Klerksdorp,Positive,0,35-59,Female,2,1.0,32400,0.0,6.17283950617284e-05,Yes,No,Susceptible,Obese,0,28
+J067-006,J067,Klerksdorp,Positive,0,13-17,Female,4,1.0,87640,0.0,0.0001390820584144,Yes,No,Susceptible,Normal weight,0,29
+J067-007,J067,Klerksdorp,Positive,0,12-May,Female,4,1.0,16320,0.5,0.0002450980392156,Yes,Yes,Susceptible,Normal weight,0,29
+J067-005,J067,Klerksdorp,Positive,0,13-17,Female,4,1.0,72880,0.0,0.0001742160278745,Yes,No,Susceptible,Normal weight,0,29
+J067-002,J067,Klerksdorp,Positive,0,35-59,Male,4,1.0,29200,0.0,0.000188679245283,Yes,No,Susceptible,Underweight,0,29
+J067-001,J067,Klerksdorp,Positive,1,35-59,Female,4,1.0,39560,0.0,0.0001769911504424,Unknown,No,,Overweight,0,29
+J068-001,J068,Klerksdorp,Positive,1,18-34,Female,1,1.0,640,0.0,0.0015625,Unknown,No,,Normal weight,0,30
+J068-002,J068,Klerksdorp,Negative,0,18-34,Male,1,1.0,640,0.0,0.0015625,No,No,Susceptible,Normal weight,0,30
+J070-003,J070,Klerksdorp,Positive,0,18-34,Female,3,1.0,18240,0.0,0.0002118644067796,No,No,Susceptible,Underweight,0,31
+J070-002,J070,Klerksdorp,Positive,0,35-59,Male,3,1.0,8760,0.6666666666666666,0.0003605769230769,Yes,No,Susceptible,Normal weight,0,31
+J070-004,J070,Klerksdorp,Positive,0,13-17,Male,3,1.0,12600,0.0,0.0002697841726618,No,No,Susceptible,Normal weight,0,31
+J070-001,J070,Klerksdorp,Positive,1,35-59,Female,3,1.0,11360,0.6666666666666666,0.0003605769230769,Unknown,No,,Obese,0,31
+J072-001,J072,Klerksdorp,Positive,1,35-59,Female,1,1.0,9560,0.0,0.0001046025104602,Unknown,No,,Obese,0,32
+J072-003,J072,Klerksdorp,Negative,0,18-34,Male,1,1.0,9560,0.0,0.0001046025104602,No,No,Susceptible,Underweight,0,32
+J073-001,J073,Klerksdorp,Positive,1,18-34,Female,1,0.5,2040,0.0,0.0004132231404958,Unknown,No,,Obese,0,33
+J073-002,J073,Klerksdorp,Positive,0,35-59,Male,2,1.0,2800,1.0,0.0007142857142857,Yes,No,Susceptible,Overweight,0,33
+J073-003,J073,Klerksdorp,Negative,0,60,Male,1,0.5,760,0.0,0.0005617977528089,No,No,Susceptible,Normal weight,0,33
+J075-004,J075,Klerksdorp,Positive,0,12-May,Female,2,1.0,124080,0.0,1.976284584980237e-05,Yes,Yes,Susceptible,Obese,0,34
+J075-003,J075,Klerksdorp,Negative,0,12-May,Male,2,1.0,166720,0.0,1.3904338153503894e-05,Yes,Yes,Susceptible,Overweight,0,34
+J075-001,J075,Klerksdorp,Positive,1,18-34,Female,2,1.0,81680,1.0,2.448579823702253e-05,Unknown,No,,Overweight,0,34
+J076-002,J076,Klerksdorp,Positive,0,18-34,Female,1,1.0,3840,0.0,0.0002604166666666,Yes,No,Susceptible,Obese,0,35
+J076-001,J076,Klerksdorp,Positive,1,18-34,Female,1,1.0,3840,0.0,0.0002604166666666,Unknown,No,,Normal weight,0,35
+J077-003,J077,Klerksdorp,Negative,0,13-17,Male,1,0.3333333333333333,480,0.0,0.0004545454545454,No,No,Susceptible,Normal weight,0,36
+J077-005,J077,Klerksdorp,Negative,0,13-17,Female,2,0.6666666666666666,4760,0.0,0.0003537735849056,No,No,Susceptible,Obese,0,36
+J077-001,J077,Klerksdorp,Positive,1,60,Female,2,0.6666666666666666,3440,0.0,0.0005136986301369,Unknown,No,,Obese,0,36
+J077-002,J077,Klerksdorp,Negative,0,35-59,Female,3,1.0,5640,0.6666666666666666,0.000531914893617,No,No,Susceptible,Obese,0,36
+S004-001,S004,Soweto,Positive,1,35-59,Male,2,1.0,17320,0.0,0.0005555555555555,Unknown,No,,Overweight,0,37
+S004-003,S004,Soweto,Negative,0,60,Male,2,1.0,19240,0.0,0.0003623188405797,No,No,Susceptible,Overweight,0,37
+S004-002,S004,Soweto,Negative,0,35-59,Female,2,1.0,3040,1.0,0.0006578947368421,Yes,No,Susceptible,Obese,0,37
+S005-002,S005,Soweto,Negative,0,18-34,Female,2,1.0,246280,0.0,9.970089730807577e-06,Yes,No,Susceptible,Normal weight,0,38
+S005-001,S005,Soweto,Positive,1,35-59,Male,2,1.0,308400,0.0,7.612667478684531e-06,Unknown,No,,Normal weight,0,38
+S005-003,S005,Soweto,Negative,0,<5,Female,2,1.0,154440,1.0,1.295001295001295e-05,Yes,Yes,Susceptible,Normal weight,0,38
+S006-008,S006,Soweto,Negative,0,18-34,Male,5,1.0,68280,0.0,0.0001159554730983,Yes,No,Susceptible,Underweight,0,39
+S006-006,S006,Soweto,Positive,0,18-34,Male,5,1.0,21680,0.4,0.0002828054298642,No,No,Susceptible,Underweight,0,39
+S006-004,S006,Soweto,Negative,0,18-34,Female,5,1.0,32320,0.0,0.0002609603340292,No,No,Susceptible,Normal weight,0,39
+S006-001,S006,Soweto,Positive,1,35-59,Female,5,1.0,55760,0.0,0.0002076411960132,Unknown,No,,Overweight,0,39
+S006-003,S006,Soweto,Negative,0,35-59,Female,5,1.0,26880,0.0,0.0002796420581655,No,No,Susceptible,Underweight,0,39
+S006-010,S006,Soweto,Positive,0,12-May,Male,5,1.0,16200,0.6000000000000001,0.0003342245989304,No,No,Susceptible,Obese,0,39
+S007-001,S007,Soweto,Positive,1,35-59,Male,7,1.0,40480,0.0,0.0003959276018099,Unknown,No,,Normal weight,0,40
+S007-004,S007,Soweto,Positive,0,35-59,Female,7,1.0,32880,0.4761904761904761,0.0014830508474576,Yes,No,Susceptible,Obese,0,40
+S007-002,S007,Soweto,Positive,0,35-59,Female,7,1.0,22640,0.2857142857142857,0.0012323943661971,No,No,Susceptible,Obese,0,40
+S007-006,S007,Soweto,Negative,0,35-59,Female,7,1.0,86880,0.0,0.0010542168674698,No,No,Susceptible,Overweight,0,40
+S007-005,S007,Soweto,Negative,0,35-59,Female,7,1.0,41360,0.0,0.0013059701492537,No,No,Susceptible,Normal weight,0,40
+S007-008,S007,Soweto,Positive,0,13-17,Female,7,1.0,5960,0.7619047619047619,0.0015086206896551,No,No,Susceptible,Normal weight,0,40
+S007-003,S007,Soweto,Negative,0,35-59,Female,7,1.0,79160,0.238095238095238,0.0011217948717948,No,No,Susceptible,Normal weight,0,40
+S007-007,S007,Soweto,Positive,0,13-17,Female,7,1.0,12560,0.0,0.0006889763779527,No,No,Susceptible,Overweight,0,40
+S008-003,S008,Soweto,Positive,0,12-May,Female,2,1.0,53000,0.0,5.0556117290192114e-05,Yes,Yes,Susceptible,Normal weight,0,41
+S008-002,S008,Soweto,Negative,0,18-34,Male,2,1.0,27120,1.0,7.374631268436578e-05,Yes,No,Susceptible,Normal weight,0,41
+S008-001,S008,Soweto,Positive,1,18-34,Female,2,1.0,55240,0.0,4.784688995215311e-05,Unknown,No,,Normal weight,0,41
+S009-002,S009,Soweto,Positive,0,18-34,Female,2,1.0,4680,0.0,0.0005,No,No,Susceptible,Obese,0,42
+S009-001,S009,Soweto,Positive,1,35-59,Male,2,1.0,3160,0.0,0.0008064516129032,Unknown,No,,Normal weight,0,42
+S009-003,S009,Soweto,Positive,0,13-17,Male,2,1.0,2160,1.0,0.0009259259259259,No,No,Susceptible,Normal weight,0,42
+S011-005,S011,Soweto,Negative,0,12-May,Female,4,1.0,177840,0.0,4.601932811780948e-05,No,Yes,Susceptible,Normal weight,0,43
+S011-004,S011,Soweto,Negative,0,12-May,Female,4,1.0,191120,0.0,4.22654268808115e-05,Yes,Yes,Susceptible,Normal weight,0,43
+S011-003,S011,Soweto,Positive,0,18-34,Female,4,1.0,42040,0.8333333333333333,0.0001091703056768,No,No,Susceptible,Normal weight,0,43
+S011-002,S011,Soweto,Positive,0,18-34,Female,4,1.0,39520,0.5,0.0001086956521739,No,No,Susceptible,Overweight,0,43
+S011-001,S011,Soweto,Positive,1,35-59,Female,4,1.0,49080,0.0,0.0001067235859124,Unknown,No,,Underweight,0,43
+S012-001,S012,Soweto,Positive,1,35-59,Female,2,1.0,13760,0.0,0.0002127659574468,Unknown,No,,Obese,0,44
+S012-003,S012,Soweto,Positive,0,13-17,Female,2,1.0,6240,1.0,0.0003205128205128,No,Yes,Susceptible,Overweight,0,44
+S012-002,S012,Soweto,Positive,0,35-59,Male,2,1.0,13680,0.0,0.0002145922746781,Yes,No,Susceptible,Overweight,0,44
+S015-001,S015,Soweto,Positive,1,35-59,Female,3,1.0,15120,0.6666666666666666,0.0001984126984126,Unknown,No,,Normal weight,0,45
+S015-003,S015,Soweto,Positive,0,13-17,Female,3,1.0,30960,0.0,0.0001020408163265,Yes,No,Susceptible,Underweight,0,45
+S015-002,S015,Soweto,Positive,0,60,Male,3,1.0,20160,0.0,0.0001794258373205,No,No,Susceptible,Normal weight,0,45
+S015-004,S015,Soweto,Positive,0,35-59,Female,3,1.0,21200,0.0,0.0001552795031055,Yes,No,Susceptible,Obese,0,45
+S016-001,S016,Soweto,Positive,1,35-59,Female,2,1.0,31040,0.0,6.443298969072165e-05,Unknown,No,,Obese,0,46
+S016-003,S016,Soweto,Negative,0,12-May,Male,2,1.0,42840,0.0,4.668534080298786e-05,No,Yes,Susceptible,Overweight,0,46
+S016-002,S016,Soweto,Positive,0,18-34,Male,2,1.0,33240,0.0,6.016847172081829e-05,No,No,Susceptible,Obese,0,46
+S018-001,S018,Soweto,Positive,1,35-59,Female,3,1.0,154000,0.0,2.734232592052497e-05,Unknown,No,,Obese,0,47
+S018-003,S018,Soweto,Positive,0,18-34,Female,3,1.0,193440,0.0,2.147766323024055e-05,No,No,Susceptible,Obese,0,47
+S018-004,S018,Soweto,Positive,0,13-17,Female,3,1.0,104560,0.0,3.155237694572991e-05,Yes,Yes,Susceptible,Overweight,0,47
+S018-005,S018,Soweto,Positive,0,12-May,Male,3,1.0,73200,0.6666666666666666,4.098360655737705e-05,Yes,Yes,Susceptible,Normal weight,0,47
+S020-002,S020,Soweto,Negative,0,18-34,Female,1,1.0,1640,0.0,0.0006097560975609,Yes,No,Susceptible,Obese,0,48
+S020-001,S020,Soweto,Positive,1,18-34,Male,1,1.0,1640,0.0,0.0006097560975609,Unknown,No,,Obese,0,48
+S021-004,S021,Soweto,Positive,0,35-59,Female,5,1.0,4360,0.7166666666666667,0.0011467889908256,No,No,Susceptible,Obese,0,49
+S021-003,S021,Soweto,Negative,0,60,Female,5,1.0,18760,0.0,0.0005506607929515,No,No,Susceptible,Obese,0,49
+S021-001,S021,Soweto,Positive,1,35-59,Female,5,1.0,16840,0.2166666666666666,0.0008278145695364,Unknown,No,,Overweight,0,49
+S021-005,S021,Soweto,Negative,0,18-34,Male,5,1.0,38160,0.0,0.0006756756756756,No,No,Susceptible,Overweight,0,49
+S021-002,S021,Soweto,Positive,0,60,Male,5,1.0,11240,0.0,0.0009541984732824,No,No,Susceptible,Normal weight,0,49
+S021-006,S021,Soweto,Negative,0,13-17,Female,5,1.0,26080,0.0,0.0007142857142857,Yes,Yes,Susceptible,Overweight,0,49
+S023-002,S023,Soweto,Positive,0,35-59,Female,2,1.0,86920,0.0,8.130081300813008e-05,Yes,No,Susceptible,Obese,0,50
+S023-001,S023,Soweto,Positive,1,35-59,Male,2,1.0,84040,0.0,9.208103130755064e-05,Unknown,No,,Overweight,0,50
+S023-003,S023,Soweto,Positive,0,18-34,Female,2,1.0,15440,1.0,0.0001295336787564,No,No,Susceptible,Obese,0,50
+S026-001,S026,Soweto,Positive,1,18-34,Female,5,1.0,153280,0.0,0.0004098360655737,Unknown,No,,Obese,0,51
+S026-005,S026,Soweto,Negative,0,13-17,Female,4,0.8,60400,0.0,0.0001445086705202,No,No,Susceptible,Normal weight,0,51
+S026-009,S026,Soweto,Negative,0,13-17,Male,5,1.0,105400,0.0,0.0003180661577608,No,No,Susceptible,Normal weight,0,51
+S026-003,S026,Soweto,Positive,0,18-34,Female,5,1.0,173920,0.0,0.0004863813229571,Yes,No,Susceptible,Overweight,0,51
+S026-008,S026,Soweto,Negative,0,12-May,Male,5,1.0,103360,0.3,0.0004098360655737,No,No,Susceptible,Normal weight,0,51
+S026-007,S026,Soweto,Negative,0,18-34,Male,4,0.8,3240,0.8,0.000494071146245,No,No,Susceptible,Normal weight,0,51
+S028-003,S028,Soweto,Negative,0,60,Female,4,1.0,23640,1.0,0.0001692047377326,No,No,Susceptible,Obese,0,52
+S028-005,S028,Soweto,Positive,0,18-34,Male,4,1.0,136040,0.0,9.442870632672332e-05,No,No,Susceptible,Obese,0,52
+S028-001,S028,Soweto,Positive,1,35-59,Male,4,1.0,182520,0.0,0.0001587301587301,Unknown,No,,Overweight,0,52
+S028-004,S028,Soweto,Positive,0,12-May,Male,4,1.0,280160,0.0,7.861635220125786e-05,No,No,Susceptible,Overweight,0,52
+S028-002,S028,Soweto,Negative,0,35-59,Female,4,1.0,195080,0.0,8.503401360544217e-05,Yes,No,Susceptible,Obese,0,52
+S030-001,S030,Soweto,Positive,1,60,Female,1,1.0,23280,0.0,4.29553264604811e-05,Unknown,No,,Obese,0,53
+S030-002,S030,Soweto,Negative,0,35-59,Female,1,1.0,23280,0.0,4.29553264604811e-05,No,No,Susceptible,Obese,0,53
+S031-003,S031,Soweto,Negative,0,18-34,Male,3,1.0,4680,0.3333333333333333,0.001056338028169,No,No,Susceptible,Normal weight,0,54
+S031-002,S031,Soweto,Negative,0,18-34,Male,2,0.6666666666666666,2680,0.0,0.0007978723404255,Yes,No,Susceptible,Normal weight,0,54
+S031-001,S031,Soweto,Positive,1,18-34,Female,3,1.0,6960,0.0,0.0005859375,Unknown,No,,Overweight,0,54
+S031-005,S031,Soweto,Positive,0,<5,Male,2,0.6666666666666666,1760,0.3333333333333333,0.001056338028169,Yes,Yes,Susceptible,Normal weight,0,54
+S032-001,S032,Soweto,Positive,1,18-34,Female,1,1.0,2560,0.0,0.000390625,Unknown,No,,Normal weight,0,55
+S032-005,S032,Soweto,Negative,0,18-34,Male,1,1.0,2560,0.0,0.000390625,No,No,Susceptible,Normal weight,0,55
+S033-004,S033,Soweto,Positive,0,13-17,Female,2,0.6666666666666666,30000,0.0,0.0001014884979702,No,Yes,Susceptible,Normal weight,0,56
+S033-002,S033,Soweto,Negative,0,35-59,Male,1,0.3333333333333333,240,0.0,0.0001870324189526,Yes,No,Susceptible,Normal weight,0,56
+S033-001,S033,Soweto,Positive,1,35-59,Female,2,0.6666666666666666,11160,0.6666666666666666,0.0001928020565552,Unknown,No,,Obese,0,56
+S033-003,S033,Soweto,Positive,0,18-34,Female,3,1.0,27400,0.6666666666666666,0.0001928020565552,No,No,Susceptible,Obese,0,56
+S036-004,S036,Soweto,Positive,0,<5,Female,3,1.0,125240,0.0,0.0001077586206896,Yes,No,Susceptible,Normal weight,0,57
+S036-002,S036,Soweto,Positive,0,18-34,Female,3,1.0,17040,1.0,0.0001760563380281,Yes,No,Susceptible,Obese,0,57
+S036-003,S036,Soweto,Negative,0,<5,Male,3,1.0,141800,0.0,9.46969696969697e-05,Yes,No,Susceptible,Normal weight,0,57
+S036-001,S036,Soweto,Positive,1,60,Female,3,1.0,92880,0.0,0.0001168224299065,Unknown,No,,Obese,0,57
+S039-004,S039,Soweto,Positive,0,18-34,Female,3,1.0,16560,0.0,0.0009868421052631,No,No,Susceptible,Obese,0,58
+S039-001,S039,Soweto,Positive,1,35-59,Male,3,1.0,2400,1.0,0.00125,Unknown,No,,Overweight,0,58
+S039-002,S039,Soweto,Positive,0,35-59,Female,3,1.0,9680,0.0,0.0005281690140845,Yes,No,Susceptible,Obese,0,58
+S039-003,S039,Soweto,Positive,0,12-May,Female,3,1.0,18640,0.0,0.0009146341463414,No,No,Susceptible,Normal weight,0,58
+S040-001,S040,Soweto,Positive,1,60,Male,3,1.0,14480,0.0,0.0015,Unknown,No,,Normal weight,0,59
+S040-004,S040,Soweto,Positive,0,12-May,Female,3,1.0,43640,0.0,0.0015625,No,No,Susceptible,Normal weight,0,59
+S040-003,S040,Soweto,Positive,0,13-17,Female,3,1.0,54360,0.0,0.0010416666666666,No,No,Susceptible,Normal weight,0,59
+S040-002,S040,Soweto,Positive,0,60,Female,3,1.0,1360,1.0,0.0022058823529411,Yes,No,Susceptible,Obese,0,59
+S044-003,S044,Soweto,Positive,0,13-17,Female,2,1.0,17600,0.0,0.0001136363636363,No,No,Susceptible,Overweight,0,60
+S044-001,S044,Soweto,Positive,1,35-59,Female,2,1.0,12760,0.0,0.0001567398119122,Unknown,No,,Obese,0,60
+S044-002,S044,Soweto,Negative,0,35-59,Male,2,1.0,16360,0.0,0.000122249388753,Yes,No,Susceptible,Underweight,0,60
+S045-003,S045,Soweto,Positive,0,60,Female,5,1.0,9760,0.0,0.0014880952380952,No,No,Susceptible,Overweight,0,61
+S045-001,S045,Soweto,Positive,1,35-59,Female,5,1.0,7080,0.0,0.0017361111111111,Unknown,No,,Normal weight,0,61
+S045-006,S045,Soweto,Positive,0,12-May,Male,5,1.0,9720,0.0,0.0012886597938144,Yes,Yes,Susceptible,Normal weight,0,61
+S045-004,S045,Soweto,Negative,0,35-59,Male,5,1.0,2400,0.7000000000000001,0.0025510204081632,No,No,Susceptible,Normal weight,0,61
+S045-002,S045,Soweto,Positive,0,60,Male,5,1.0,6280,0.3,0.0020491803278688,No,No,Susceptible,Overweight,0,61
+S045-005,S045,Soweto,Positive,0,35-59,Female,5,1.0,6600,0.3,0.0020491803278688,No,No,Susceptible,Overweight,0,61
+S046-001,S046,Soweto,Positive,1,60,Male,1,1.0,3400,0.0,0.0002941176470588,Unknown,No,,Underweight,0,62
+S046-002,S046,Soweto,Positive,0,35-59,Female,1,1.0,3400,0.0,0.0002941176470588,No,No,Susceptible,Overweight,0,62
+S047-003,S047,Soweto,Negative,0,<5,Male,1,1.0,8720,0.0,0.0001146788990825,Yes,Yes,Susceptible,Normal weight,0,63
+S047-001,S047,Soweto,Positive,1,35-59,Female,1,1.0,8720,0.0,0.0001146788990825,Unknown,No,,Overweight,0,63
+S048-001,S048,Soweto,Positive,1,60,Male,1,0.3333333333333333,12400,0.0,7.995735607675907e-05,Unknown,No,,Normal weight,0,64
+S048-002,S048,Soweto,Positive,0,35-59,Female,2,0.6666666666666666,12520,0.6666666666666666,0.0002358490566037,Yes,No,Susceptible,Obese,0,64
+S048-006,S048,Soweto,Positive,0,18-34,Female,1,0.3333333333333333,80,0.0,0.0002329192546583,No,No,Susceptible,Obese,0,64
+S048-005,S048,Soweto,Positive,0,18-34,Male,2,0.6666666666666666,200,0.6666666666666666,0.0002358490566037,No,No,Susceptible,Overweight,0,64
+S049-003,S049,Soweto,Negative,0,35-59,Female,3,1.0,10360,0.6666666666666666,0.0002895752895752,No,No,Susceptible,Overweight,0,65
+S049-004,S049,Soweto,Negative,0,12-May,Male,1,0.3333333333333333,7480,0.0,0.0001184834123222,No,No,Susceptible,Obese,0,65
+S049-005,S049,Soweto,Negative,0,35-59,Male,2,0.6666666666666666,1840,0.0,0.0002862595419847,Yes,No,Susceptible,Underweight,0,65
+S049-001,S049,Soweto,Positive,1,60,Female,2,0.6666666666666666,2400,0.0,0.0002586206896551,Unknown,No,,Obese,0,65
+S050-002,S050,Soweto,Negative,0,60,Female,4,1.0,48920,0.0,0.0001779359430604,No,No,Susceptible,Overweight,0,66
+S050-005,S050,Soweto,Negative,0,12-May,Male,4,1.0,50520,0.0,0.0001724137931034,No,Yes,Susceptible,Normal weight,0,66
+S050-003,S050,Soweto,Positive,0,35-59,Male,4,1.0,20680,0.1666666666666666,0.0002262443438914,No,No,Susceptible,Normal weight,0,66
+S050-004,S050,Soweto,Positive,0,18-34,Male,4,1.0,18680,0.3333333333333333,0.0002551020408163,Yes,No,Susceptible,Underweight,0,66
+S050-001,S050,Soweto,Positive,1,18-34,Male,4,1.0,20560,0.1666666666666666,0.0002325581395348,Unknown,No,,Normal weight,0,66
+S051-001,S051,Soweto,Positive,1,35-59,Male,1,1.0,120,0.0,0.0083333333333333,Unknown,No,,Overweight,0,67
+S051-004,S051,Soweto,Negative,0,18-34,Female,1,1.0,120,0.0,0.0083333333333333,No,No,Susceptible,Overweight,0,67
+S052-003,S052,Soweto,Negative,0,12-May,Male,2,1.0,800,1.0,0.0025,No,Yes,Susceptible,Obese,0,68
+S052-001,S052,Soweto,Positive,1,35-59,Female,2,1.0,920,0.0,0.0022727272727272,Unknown,No,,Obese,0,68
+S052-002,S052,Soweto,Positive,0,13-17,Female,2,1.0,1560,0.0,0.0013157894736842,Yes,No,Susceptible,Obese,0,68
+S053-002,S053,Soweto,Positive,0,35-59,Female,2,1.0,9760,0.0,0.0002049180327868,No,No,Susceptible,Normal weight,0,69
+S053-001,S053,Soweto,Positive,1,60,Female,2,1.0,15440,0.0,0.0001295336787564,Unknown,No,,Obese,0,69
+S053-003,S053,Soweto,Positive,0,35-59,Male,2,1.0,10400,0.0,0.0001923076923076,No,No,Susceptible,Obese,0,69
+S056-001,S056,Soweto,Positive,1,35-59,Female,2,1.0,36400,0.0,5.494505494505495e-05,Unknown,No,,Normal weight,0,70
+S056-004,S056,Soweto,Positive,0,13-17,Male,2,1.0,38800,0.0,5.154639175257732e-05,No,No,Susceptible,Normal weight,0,70
+S056-003,S056,Soweto,Positive,0,18-34,Female,2,1.0,32960,0.0,6.067961165048544e-05,No,No,Susceptible,Normal weight,0,70
+S057-004,S057,Soweto,Negative,0,<5,Male,2,0.6666666666666666,67160,0.0,6.584723441615452e-05,No,Yes,Susceptible,Underweight,0,71
+S057-003,S057,Soweto,Positive,0,12-May,Female,3,1.0,71480,0.0,0.000135623869801,No,Yes,Susceptible,Normal weight,0,71
+S057-002,S057,Soweto,Positive,0,18-34,Female,3,1.0,32480,0.6666666666666666,0.0001417769376181,No,No,Susceptible,Overweight,0,71
+S057-001,S057,Soweto,Positive,1,35-59,Female,2,0.6666666666666666,4720,0.6666666666666666,0.0001417769376181,Unknown,No,,Obese,0,71
+S060-002,S060,Soweto,Negative,0,35-59,Male,3,1.0,87520,0.0,4.4326241134751776e-05,No,No,Susceptible,Overweight,0,72
+S060-003,S060,Soweto,Negative,0,35-59,Female,3,1.0,49240,0.0,6.092607636068237e-05,No,No,Susceptible,Obese,0,72
+S060-004,S060,Soweto,Negative,0,12-May,Male,3,1.0,132640,0.0,2.6595744680851064e-05,Yes,Yes,Susceptible,Overweight,0,72
+S060-001,S060,Soweto,Positive,1,18-34,Female,3,1.0,47960,0.3333333333333333,6.255212677231025e-05,Unknown,No,,Obese,0,72
+S061-005,S061,Soweto,Positive,0,12-May,Male,4,1.0,142280,0.0,0.0001602564102564,No,No,Susceptible,Underweight,0,73
+S061-001,S061,Soweto,Positive,1,60,Female,4,1.0,7560,1.0,0.0005291005291005,Unknown,No,,Overweight,0,73
+S061-004,S061,Soweto,Positive,0,35-59,Female,4,1.0,57040,0.0,0.0003968253968253,No,No,Susceptible,Overweight,0,73
+S061-003,S061,Soweto,Positive,0,35-59,Male,4,1.0,96160,0.0,0.0004115226337448,No,No,Susceptible,Normal weight,0,73
+S061-002,S061,Soweto,Positive,0,35-59,Male,4,1.0,18240,0.0,0.0004901960784313,No,No,Susceptible,Underweight,0,73
+S062-002,S062,Soweto,Positive,0,35-59,Female,3,0.75,2680,0.1666666666666666,0.0010309278350515,No,No,Susceptible,Overweight,0,74
+S062-007,S062,Soweto,Positive,0,18-34,Female,3,0.75,9760,0.0,0.0006896551724137,No,No,Susceptible,Normal weight,0,74
+S062-001,S062,Soweto,Positive,1,18-34,Female,4,1.0,4880,0.5,0.000943396226415,Unknown,No,,Normal weight,0,74
+S062-003,S062,Soweto,Positive,0,18-34,Female,4,1.0,21440,0.0,0.0009615384615384,Yes,No,Susceptible,Normal weight,0,74
+S062-005,S062,Soweto,Negative,0,35-59,Female,4,1.0,16600,0.3333333333333333,0.0010416666666666,Yes,No,Susceptible,Overweight,0,74
+S063-001,S063,Soweto,Positive,1,18-34,Female,2,0.6666666666666666,15320,0.0,0.0001217532467532,Unknown,No,,Overweight,0,75
+S063-003,S063,Soweto,Positive,0,35-59,Female,3,1.0,70960,0.0,0.000146484375,No,No,Susceptible,Obese,0,75
+S063-004,S063,Soweto,Positive,0,13-17,Male,3,1.0,14280,0.6666666666666666,0.0002100840336134,No,No,Susceptible,Normal weight,0,75
+S063-002,S063,Soweto,Positive,0,35-59,Male,2,0.6666666666666666,60000,0.0,0.0001592356687898,No,No,Susceptible,Underweight,0,75
+S064-002,S064,Soweto,Positive,0,35-59,Female,2,1.0,4080,0.0,0.00078125,No,No,Susceptible,Overweight,0,76
+S064-001,S064,Soweto,Positive,1,60,Female,2,1.0,3040,0.0,0.0013157894736842,Unknown,No,,Obese,0,76
+S064-004,S064,Soweto,Positive,0,35-59,Male,2,1.0,1360,1.0,0.0014705882352941,No,No,Susceptible,Underweight,0,76
+S067-002,S067,Soweto,Positive,0,18-34,Male,3,1.0,4480,0.0,0.0009493670886075,No,No,Susceptible,Normal weight,0,77
+S067-001,S067,Soweto,Positive,1,35-59,Female,3,1.0,2600,0.6666666666666666,0.0017441860465116,Unknown,No,,Normal weight,0,77
+S067-003,S067,Soweto,Positive,0,35-59,Female,3,1.0,12760,0.0,0.0015306122448979,No,No,Susceptible,Normal weight,0,77
+S067-004,S067,Soweto,Negative,0,18-34,Female,3,1.0,12080,0.6666666666666666,0.0017441860465116,No,No,Susceptible,Normal weight,0,77
+S070-003,S070,Soweto,Positive,0,35-59,Female,2,1.0,18080,0.0,0.0003067484662576,No,No,Susceptible,Obese,0,78
+S070-001,S070,Soweto,Positive,1,60,Male,2,1.0,5200,1.0,0.0003846153846153,Unknown,No,,Obese,0,78
+S070-002,S070,Soweto,Positive,0,35-59,Female,2,1.0,20640,0.0,0.0002202643171806,Yes,No,Susceptible,Obese,0,78
+S071-006,S071,Soweto,Positive,0,12-May,Female,3,0.6000000000000001,1520,0.6000000000000001,0.0037878787878787,No,Yes,Susceptible,Normal weight,0,79
+S071-008,S071,Soweto,Positive,0,12-May,Male,5,1.0,3520,0.0,0.0033783783783783,No,Yes,Susceptible,Normal weight,0,79
+S071-002,S071,Soweto,Positive,0,60,Male,4,0.8,9400,0.0,0.0015822784810126,Yes,No,Susceptible,Normal weight,0,79
+S071-005,S071,Soweto,Positive,0,12-May,Female,4,0.8,2200,0.4,0.0024509803921568,No,Yes,Susceptible,Normal weight,0,79
+S071-001,S071,Soweto,Positive,1,60,Female,4,0.8,3880,0.7000000000000001,0.0037878787878787,Unknown,No,,Normal weight,0,79
+S071-004,S071,Soweto,Positive,0,13-17,Male,4,0.8,5640,0.0,0.0033783783783783,No,Yes,Susceptible,Overweight,0,79
+S072-001,S072,Soweto,Positive,1,35-59,Male,5,1.0,11360,0.9,0.0011160714285714,Unknown,No,,Obese,0,80
+S072-007,S072,Soweto,Positive,0,12-May,Male,5,1.0,46720,0.0,0.0009191176470588,No,No,Susceptible,Normal weight,0,80
+S072-006,S072,Soweto,Positive,0,12-May,Male,5,1.0,179240,0.0,0.0004595588235294,No,No,Susceptible,Normal weight,0,80
+S072-004,S072,Soweto,Positive,0,12-May,Male,5,1.0,158480,0.0,0.0005296610169491,No,No,Susceptible,Obese,0,80
+S072-008,S072,Soweto,Negative,0,35-59,Female,5,1.0,34320,0.0,0.000595238095238,Yes,No,Susceptible,Obese,0,80
+S072-005,S072,Soweto,Positive,0,12-May,Male,5,1.0,56600,0.4,0.0009920634920634,No,No,Susceptible,Overweight,0,80
+S073-002,S073,Soweto,Positive,0,35-59,Male,3,1.0,84640,0.0,0.0001748251748251,Yes,No,Susceptible,Normal weight,0,81
+S073-004,S073,Soweto,Positive,0,13-17,Male,3,1.0,81280,0.6666666666666666,0.0002124645892351,No,No,Susceptible,Normal weight,0,81
+S073-001,S073,Soweto,Positive,1,35-59,Female,2,0.6666666666666666,2560,0.6666666666666666,0.0002124645892351,Unknown,No,,Obese,0,81
+S073-003,S073,Soweto,Positive,0,18-34,Female,2,0.6666666666666666,23920,0.0,8.532423208191126e-05,No,No,Susceptible,Unknown,0,81
+S074-004,S074,Soweto,Positive,0,12-May,Female,3,1.0,21280,0.0,0.0012931034482758,No,Yes,Susceptible,Overweight,0,82
+S074-001,S074,Soweto,Positive,1,35-59,Female,3,1.0,18200,0.0,0.00234375,Unknown,No,,Obese,0,82
+S074-003,S074,Soweto,Positive,0,18-34,Female,3,1.0,1040,1.0,0.0028846153846153,No,No,Susceptible,Obese,0,82
+S074-002,S074,Soweto,Positive,0,35-59,Female,3,1.0,8200,0.0,0.001875,No,No,Susceptible,Obese,0,82
+S075-003,S075,Soweto,Positive,0,35-59,Female,3,1.0,11320,0.0,0.0002884615384615,No,No,Susceptible,Overweight,0,83
+S075-004,S075,Soweto,Positive,0,18-34,Female,3,1.0,22080,0.0,0.0001923076923076,No,No,Susceptible,Normal weight,0,83
+S075-001,S075,Soweto,Positive,1,35-59,Female,3,1.0,15560,0.3333333333333333,0.0003303964757709,Unknown,No,,Obese,0,83
+S075-002,S075,Soweto,Positive,0,60,Female,3,1.0,10000,0.3333333333333333,0.0003303964757709,No,No,Susceptible,Obese,0,83
+S078-003,S078,Soweto,Negative,0,12-May,Male,2,1.0,39760,0.0,0.0001577287066246,No,No,Susceptible,Normal weight,0,84
+S078-001,S078,Soweto,Positive,1,60,Female,2,1.0,7600,1.0,0.0002631578947368,Unknown,No,,Obese,0,84
+S078-002,S078,Soweto,Negative,0,18-34,Female,2,1.0,37200,0.0,0.000197628458498,No,No,Susceptible,Overweight,0,84
+S079-001,S079,Soweto,Positive,1,35-59,Female,4,1.0,59920,0.0,8.896797153024912e-05,Unknown,No,,Obese,0,85
+S079-004,S079,Soweto,Positive,0,18-34,Female,4,1.0,64960,0.0,7.843137254901961e-05,No,No,Susceptible,Overweight,0,85
+S079-006,S079,Soweto,Positive,0,12-May,Female,4,1.0,101120,0.0,4.244482173174873e-05,Yes,Yes,Susceptible,Obese,0,85
+S079-003,S079,Soweto,Positive,0,60,Female,4,1.0,40080,0.5,0.0001015228426395,No,No,Susceptible,Normal weight,0,85
+S079-005,S079,Soweto,Positive,0,13-17,Female,4,1.0,37600,0.5,0.0001086956521739,Yes,Yes,Susceptible,Normal weight,0,85
+S080-003,S080,Soweto,Negative,0,35-59,Female,2,1.0,189160,0.0,1.9142419601837672e-05,No,No,Susceptible,Obese,0,86
+S080-001,S080,Soweto,Positive,1,18-34,Male,2,1.0,87480,1.0,2.2862368541380887e-05,Unknown,No,,Normal weight,0,86
+S080-002,S080,Soweto,Negative,0,35-59,Male,2,1.0,242640,0.0,1.2661433274246645e-05,No,No,Susceptible,Normal weight,0,86
+S081-001,S081,Soweto,Positive,1,35-59,Female,1,1.0,3000,0.0,0.0003333333333333,Unknown,No,,Obese,0,87
+S081-003,S081,Soweto,Negative,0,13-17,Male,1,1.0,3000,0.0,0.0003333333333333,Yes,Yes,Susceptible,Normal weight,0,87
