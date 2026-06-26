@@ -1,0 +1,9 @@
+feature,value,n,sars_positive,positive_rate
+is_index,0,252,153,0.6071
+is_index,1,88,88,1.0
+sus_enc,0,88,88,1.0
+sus_enc,1,252,153,0.6071
+sleep_room_enc,0,259,191,0.7375
+sleep_room_enc,1,81,50,0.6173
+cared_by_enc,0,300,216,0.72
+cared_by_enc,1,40,25,0.625

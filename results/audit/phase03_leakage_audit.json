@@ -1,0 +1,95 @@
+{
+  "dataset": {
+    "raw_proximity_events": 140542,
+    "metadata_rows": 340,
+    "individuals": 340,
+    "households": 88,
+    "processed_edges": 542,
+    "self_loops_in_raw": 0,
+    "real_timestamp_rows": 95492,
+    "missing_real_timestamp_rows": 45050,
+    "sites": {
+      "Soweto": 197,
+      "Klerksdorp": 143
+    }
+  },
+  "legacy_node_split_risk": {
+    "households_total": 88,
+    "households_with_train_test_overlap": 37,
+    "households_with_any_cross_split_overlap": 62
+  },
+  "proxy_feature_summary": [
+    {
+      "feature": "is_index",
+      "value": "0",
+      "n": 252,
+      "sars_positive": 153,
+      "positive_rate": 0.6071
+    },
+    {
+      "feature": "is_index",
+      "value": "1",
+      "n": 88,
+      "sars_positive": 88,
+      "positive_rate": 1.0
+    },
+    {
+      "feature": "sus_enc",
+      "value": "0",
+      "n": 88,
+      "sars_positive": 88,
+      "positive_rate": 1.0
+    },
+    {
+      "feature": "sus_enc",
+      "value": "1",
+      "n": 252,
+      "sars_positive": 153,
+      "positive_rate": 0.6071
+    },
+    {
+      "feature": "sleep_room_enc",
+      "value": "0",
+      "n": 259,
+      "sars_positive": 191,
+      "positive_rate": 0.7375
+    },
+    {
+      "feature": "sleep_room_enc",
+      "value": "1",
+      "n": 81,
+      "sars_positive": 50,
+      "positive_rate": 0.6173
+    },
+    {
+      "feature": "cared_by_enc",
+      "value": "0",
+      "n": 300,
+      "sars_positive": 216,
+      "positive_rate": 0.72
+    },
+    {
+      "feature": "cared_by_enc",
+      "value": "1",
+      "n": 40,
+      "sars_positive": 25,
+      "positive_rate": 0.625
+    }
+  ],
+  "mitigation": {
+    "removed_from_graphsage_features": [
+      "is_index",
+      "sus_enc"
+    ],
+    "required_split_protocol": "household-level split with no household overlap across train/validation/test",
+    "required_scaling_protocol": "fit continuous-feature scaling parameters on train households only"
+  },
+  "artifacts": {
+    "data_dictionary_mapping": "results/audit/phase03_data_dictionary_mapping.csv"
+  },
+  "current_household_split_check": {
+    "households_total": 88,
+    "households_with_train_test_overlap": 0,
+    "households_with_any_cross_split_overlap": 0
+  }
+}

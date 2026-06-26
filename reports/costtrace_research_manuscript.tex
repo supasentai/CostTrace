@@ -79,7 +79,7 @@
 \maketitle
 
 \begin{abstract}
-Household contact networks provide a structured representation of close physical interactions that may shape infectious disease transmission. This study presents \costtrace, a reproducible pipeline for budget-constrained node intervention in an empirical SARS-CoV-2 household contact network. Using the SASHTS dataset, we aggregate 140,542 raw proximity events into a weighted undirected graph of 340 individuals, 542 contact edges, and 88 household components. The pipeline computes topology, centrality, Louvain communities, interpretable composite risk scores, and a lightweight pure-PyTorch Weighted GraphSAGE proxy for node-level infection-risk ranking. We compare Random, Degree, Betweenness, and GraphSAGE-based strategies under 1\%, 5\%, and 10\% intervention budgets using counterfactual transmission blocking and household-level SIR simulation. The household graph is globally sparse but locally dense, with average household density 0.9633 and Louvain modularity 0.9696 with 100\% household agreement. The GraphSAGE proxy achieves test AUC 0.7669 and average precision 0.8995. Under counterfactual evaluation, Degree performs best at the 1\% budget with a 4.6\% prevention rate, while GraphSAGE performs best at 5\% and 10\%, reaching 26.8\% and 49.0\% prevention rates and SIR reductions of 22.2\% and 42.7\%, respectively. These findings suggest that simple centrality can be competitive under extremely scarce budgets, whereas learned multi-feature ranking becomes more useful when intervention capacity increases. The study is a proof of concept on one household dataset and should not be interpreted as a clinical decision system without further validation.
+Household contact networks provide a structured representation of close physical interactions that may shape infectious disease transmission. This study presents \costtrace, a reproducible pipeline for budget-constrained node intervention in an empirical SARS-CoV-2 household contact network. Using the SASHTS dataset, we aggregate 140,542 raw proximity events into a weighted undirected graph of 340 individuals, 542 contact edges, and 88 household components. The pipeline computes topology, centrality, Louvain communities, interpretable composite risk scores, and a lightweight pure-PyTorch Weighted GraphSAGE proxy for node-level infection-risk ranking. We compare Random, Degree, Betweenness, and GraphSAGE-based strategies under 1\%, 5\%, and 10\% intervention budgets using counterfactual transmission blocking and household-level SIR simulation. The household graph is globally sparse but locally dense, with average household density 0.9633 and Louvain modularity 0.9696 with 100\% household agreement. After leakage-control revisions, GraphSAGE is evaluated with household-held-out splits, train-only scaling, and removal of deterministic label-proxy features; under this stricter protocol, it achieves test AUC 0.4428 and average precision 0.7359. Under counterfactual evaluation, Degree performs best at the 1\% budget with a 4.6\% prevention rate, GraphSAGE performs best at 5\% with a 17.6\% prevention rate, and Random performs best at 10\% with a 33.0\% prevention rate. In SIR simulation, GraphSAGE has the largest reduction at 5\% and 10\%, reaching 12.6\% and 22.7\% reductions, respectively. These findings show that earlier node-level evaluation was optimistic and that the current results should be interpreted as leakage-controlled proof-of-concept evidence rather than as a clinical decision system.
 \end{abstract}
 
 \noindent\textbf{Keywords:} contact network; epidemic intervention; budget-constrained node selection; GraphSAGE; social network analysis; SARS-CoV-2; SIR simulation.
@@ -90,7 +90,7 @@ Household contact networks provide a structured representation of close physical
   \item Confirm the exact target journal, article type, and reference style.
   \item Fill final author names, affiliations, emails, corresponding author, phone, and ORCID.
   \item Confirm whether a Vietnamese title page and Vietnamese abstract are required.
-  \item Replace all provisional wording if Phase 04--05 upgrades produce new validated results.
+  \item Replace all provisional wording if Phase 04--05 upgrades produce new validated multi-fold or sensitivity results.
   \item Confirm raw-data redistribution permissions; otherwise cite data source only and omit raw data from public release.
 \end{itemize}
 
@@ -122,9 +122,9 @@ Contact tracing, epidemic network modeling, influence maximization, vaccination 
 
 \subsection{Dataset}
 
-The study uses the SASHTS -- South Africa Household Transmission Study -- proximity sensor and epidemiological dataset. Repository evidence records 140,542 raw proximity events, 340 individuals, 88 households, and 542 aggregated weighted contact edges after preprocessing. The dataset includes site labels, SARS status, index/contact role, age group, sex, susceptibility, household identifiers, and selected household exposure indicators.
+The study uses the SASHTS -- South Africa Household Transmission Study -- proximity sensor and epidemiological dataset. Repository evidence records 140,542 raw proximity events, 340 individuals, 88 households, and 542 aggregated weighted contact edges after preprocessing. The dataset includes site labels, SARS status, index/contact role, age group, sex, susceptibility, household identifiers, selected household exposure indicators, and pair-level contact durations. Variable names and labels used in this manuscript are mapped from \texttt{data/raw/Data dictionary.xlsx} into the generated audit artifact \texttt{results/audit/phase03\_data\_dictionary\_mapping.csv}.
 
-The current repository note reports that Soweto records include real timestamps for the collection period 2020-11-18 to 2021-08-19, whereas Klerksdorp records do not contain real timestamps. Therefore, the current analysis is treated primarily as a static weighted household contact graph rather than as a fully temporal intervention model.
+The current repository note reports that Soweto records include real timestamps for the collection period 2020-11-18 to 2021-08-19, whereas Klerksdorp records do not contain real timestamps. The phase audit counted 95,492 rows with real timestamps and 45,050 rows without real timestamps. Therefore, the current analysis is treated primarily as a static weighted household contact graph rather than as a fully temporal intervention model.
 
 \begin{table}[htbp]
 \centering
@@ -159,6 +159,16 @@ G = (V, E, W),
 \]
 where \(V\) is the set of individuals, \(E\) is the set of aggregated contact pairs, and \(W\) stores total contact duration.
 
+The reproducible preprocessing pipeline is:
+
+\begin{enumerate}
+  \item Load raw proximity events from \texttt{data/raw/sashts\_contact\_network.csv} and participant metadata from \texttt{data/raw/sashts\_metadata.csv}.
+  \item Verify expected row counts and unique participant counts with \texttt{src/costtrace/preparation/audit.py}.
+  \item Remove self-loops, canonicalize dyad order, mark whether timestamps are real, and aggregate repeated events by unordered pair and household with \texttt{src/costtrace/preparation/curation.py}.
+  \item Build the undirected weighted NetworkX graph and attach node metadata with \texttt{src/costtrace/preparation/graph.py}.
+  \item Export processed graph artifacts under \texttt{data/processed/} and summary metrics under \texttt{data/processed/eda\_summary.json}.
+\end{enumerate}
+
 \subsection{Topology, Centrality, and Community Detection}
 
 The graph is analyzed as 88 connected household components. This is necessary because the global graph is disconnected by construction and does not contain cross-household edges. For each node, the pipeline computes degree centrality, weighted degree, betweenness centrality, and closeness centrality. Louvain community detection is applied using total contact duration as edge weight.
@@ -175,13 +185,33 @@ An interpretable composite risk score is computed as:
 
 where \(d_v\) is normalized degree centrality, \(w_v\) is normalized weighted degree, \(b_v\) is normalized betweenness centrality, and \(s_v\) encodes whether the participant slept in the same room as the index case.
 
+\subsection{Leakage Control and Split Protocol}
+
+Phase 03 identified three leakage risks in the original course-style pipeline: node-level random splitting mixed members of the same household across train and test sets; deterministic metadata proxies such as index-case status and susceptibility encoded the SARS outcome for the index cases; and continuous-feature normalization had been computed before the model split. The revised protocol uses household-level train/validation/test masks, removes \texttt{is\_index} and \texttt{sus\_enc} from the GraphSAGE feature set, and fits continuous-feature scaling on train households only. The current split contains 61 training households, 15 validation households, and 12 test households, with zero household overlap across splits.
+
+\begin{table}[htbp]
+\centering
+\caption{Phase 03 leakage audit and mitigation. Evidence is generated by \texttt{scripts/18\_phase03\_leakage\_audit.py}.}
+\label{tab:leakage-audit}
+\begin{tabularx}{\textwidth}{p{0.22\textwidth}X X X}
+\toprule
+Risk & Evidence & Mitigation & Residual risk \\
+\midrule
+Label-proxy features & \texttt{is\_index=1} and \texttt{sus\_enc=0} each correspond to 88/88 SARS-positive individuals in the current artifacts. & Remove \texttt{is\_index} and \texttt{sus\_enc} from GraphSAGE inputs. & Other epidemiological fields may still be post-outcome unless the observation time is confirmed. \\
+Household overlap & The legacy node-level split placed train and test nodes in the same household for 37/88 households. & Use household-level split with no household overlap. & The small number of households can increase metric variance; multi-fold evaluation remains future work. \\
+Full-data scaling & Previous normalized columns were produced before the model split. & Fit continuous-feature scaling parameters on train households only. & Composite risk remains descriptive unless recalculated within each predictive fold. \\
+Edge outcome leakage & Processed edge lists retain observed \texttt{pair\_sars}/\texttt{transmission} labels for retrospective evaluation. & GraphSAGE adjacency uses only contact duration weights. & Counterfactual evaluation remains retrospective observed-edge blocking, not prospective causal validation. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \subsection{Weighted GraphSAGE Proxy}
 
-The graph-learning model is a lightweight pure-PyTorch Weighted GraphSAGE classifier. It uses 11 input features: normalized degree centrality, normalized weighted degree, normalized betweenness centrality, normalized closeness centrality, sleep-room exposure, caregiving exposure, scaled age group, sex, susceptibility, site, and index-case role.
+The graph-learning model is a lightweight pure-PyTorch Weighted GraphSAGE classifier. After leakage-control revisions, it uses 9 input features: train-scaled degree centrality, train-scaled weighted degree, train-scaled betweenness centrality, train-scaled closeness centrality, sleep-room exposure, caregiving exposure, scaled age group, sex, and site.
 
-Edge weights are transformed as \(\log(1 + \mathrm{duration})\) and row-normalized for weighted mean aggregation. The model is trained with a stratified 70\%/15\%/15\% train/validation/test split, 500 epochs, Adam optimization, learning rate 0.01, weight decay \(5\times 10^{-4}\), and seed 42. The output probability is used as a ranking score for top-\(k\) selection.
+Edge weights are transformed as \(\log(1 + \mathrm{duration})\) and row-normalized for weighted mean aggregation. The model is trained with the household-held-out 70\%/15\%/15\% train/validation/test protocol described above, 500 epochs, Adam optimization, learning rate 0.01, weight decay \(5\times 10^{-4}\), and seed 42. The output probability is used as a ranking score for top-\(k\) selection.
 
-\TODO{Phase 03 and Phase 04 should revisit split protocol and leakage risk. Current node-level stratified splitting may overestimate generalization because household components can be shared across splits.}
+Although the code loads the complete graph object for implementation convenience, SASHTS connected components do not cross household boundaries; therefore, the household-held-out split prevents message passing between training and test households.
 
 \subsection{Budget-Constrained Intervention Strategies}
 
@@ -229,7 +259,7 @@ The SASHTS graph contains 340 nodes and 542 weighted edges across 88 connected h
 
 \subsection{GraphSAGE Risk Model}
 
-The Weighted GraphSAGE proxy achieves test AUC 0.7669 and test average precision 0.8995. The large train-test gap suggests overfitting risk, but the average precision indicates that the model can still provide a useful ranking signal for top-\(k\) prioritization in this proof-of-concept setting.
+Under the leakage-controlled household-held-out protocol, the Weighted GraphSAGE proxy achieves test AUC 0.4428 and test average precision 0.7359. This is substantially weaker than the previous node-level evaluation and indicates that the original course-style protocol overestimated generalization. The model output is retained only as one ranking signal for the intervention comparison, not as evidence of a deployable diagnostic classifier.
 
 \begin{table}[htbp]
 \centering
@@ -239,16 +269,16 @@ The Weighted GraphSAGE proxy achieves test AUC 0.7669 and test average precision
 \toprule
 Split & AUC & AP & F1 & Precision & Recall \\
 \midrule
-Train & 0.9914 & 0.9966 & 0.9619 & 0.9480 & 0.9762 \\
-Validation & 0.8036 & 0.9162 & 0.8732 & 0.8857 & 0.8611 \\
-Test & 0.7669 & 0.8995 & 0.8158 & 0.7949 & 0.8378 \\
+Train & 0.6398 & 0.8198 & 0.8247 & 0.7017 & 1.0000 \\
+Validation & 0.5676 & 0.7794 & 0.8315 & 0.7115 & 1.0000 \\
+Test & 0.4428 & 0.7359 & 0.8506 & 0.7400 & 1.0000 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Intervention Performance}
 
-Table~\ref{tab:final-comparison} summarizes the final intervention comparison. At the 1\% budget, Degree achieves the highest counterfactual prevention rate, 4.6\%. At 5\% and 10\%, GraphSAGE is the strongest strategy, achieving prevention rates of 26.8\% and 49.0\%, and SIR reductions of 22.2\% and 42.7\%.
+Table~\ref{tab:final-comparison} summarizes the final intervention comparison after rerunning downstream allocation with the leakage-controlled GraphSAGE scores. At the 1\% budget, Degree achieves the highest counterfactual prevention rate, 4.6\%. At 5\%, GraphSAGE achieves the highest prevention rate, 17.6\%. At 10\%, Random has the highest observed-edge prevention rate, 33.0\%, while GraphSAGE has the largest SIR reduction, 22.7\%.
 
 \begin{table}[htbp]
 \centering
@@ -259,16 +289,16 @@ Table~\ref{tab:final-comparison} summarizes the final intervention comparison. A
 Budget & Nodes & Strategy & Precision@k & Transmission coverage & Prevention rate & SIR reduction \\
 \midrule
 1\% & 3 & Degree & 100.0 & 2.4 & 4.6 & 2.0 \\
-1\% & 3 & GraphSAGE & 100.0 & 2.1 & 3.9 & 3.8 \\
 1\% & 3 & Random & 71.7 & 1.7 & 3.3 & 1.2 \\
+1\% & 3 & GraphSAGE & 100.0 & 0.7 & 1.3 & 1.4 \\
 1\% & 3 & Betweenness & 66.7 & 0.3 & 0.7 & 1.0 \\
-5\% & 17 & GraphSAGE & 100.0 & 14.3 & 26.8 & 22.2 \\
+5\% & 17 & GraphSAGE & 100.0 & 11.5 & 17.6 & 12.6 \\
 5\% & 17 & Random & 70.8 & 9.7 & 17.4 & 7.6 \\
 5\% & 17 & Betweenness & 64.7 & 6.3 & 11.8 & 8.9 \\
 5\% & 17 & Degree & 64.7 & 8.4 & 10.5 & 6.6 \\
-10\% & 34 & GraphSAGE & 100.0 & 26.2 & 49.0 & 42.7 \\
 10\% & 34 & Random & 70.7 & 19.2 & 33.0 & 16.8 \\
 10\% & 34 & Betweenness & 70.6 & 16.4 & 30.7 & 20.4 \\
+10\% & 34 & GraphSAGE & 94.1 & 19.9 & 28.1 & 22.7 \\
 10\% & 34 & Degree & 64.7 & 17.1 & 22.2 & 14.6 \\
 \bottomrule
 \end{tabular}
@@ -293,27 +323,27 @@ Budget & Nodes & Strategy & Precision@k & Transmission coverage & Prevention rat
 
 \section{Discussion}
 
-The results support a budget-sensitive interpretation of intervention strategy. When only three nodes can be selected, direct contact coverage is decisive, and Degree Centrality is a transparent and competitive heuristic. When the budget increases to 17 or 34 nodes, GraphSAGE benefits from combining structural, exposure, and metadata features, leading to larger counterfactual prevention and SIR reductions.
+The results support a budget-sensitive interpretation of intervention strategy. When only three nodes can be selected, direct contact coverage is decisive, and Degree Centrality is a transparent and competitive heuristic. At the 5\% budget, GraphSAGE remains competitive after leakage control, but at the 10\% budget its counterfactual prevention rate no longer dominates the simpler baselines. This change is scientifically important: it indicates that the original node-level protocol overstated graph-learning performance, and that leakage-controlled household-held-out evaluation is necessary before making model-comparison claims.
 
 Betweenness is weaker in this dataset because the graph is composed of disconnected household components. Bridge-like nodes are often important in networks with cross-community paths, but SASHTS contains no observed cross-household edges. This limits the value of global bridge-based intervention and shifts emphasis toward direct household exposure and local risk ranking.
 
-These findings should be interpreted as evidence from a single household contact network. They do not establish universal superiority of graph learning for epidemic intervention. Instead, they suggest a conditional rule: use simple centrality when budget is extremely scarce and explainability is critical; use multi-feature graph learning when the intervention set is large enough for learned ranking to exploit richer risk signals.
+These findings should be interpreted as evidence from a single household contact network. They do not establish universal superiority of graph learning for epidemic intervention. Instead, they suggest that simple centrality remains a strong and transparent baseline, while graph-learning rankings require stronger validation through repeated household-level folds and external datasets before they can support general recommendations.
 
 \section{Limitations}
 
-This study has several limitations. First, the dataset contains 340 individuals in 88 household components, which limits external validity for schools, workplaces, hospitals, or city-scale contact networks. Second, Klerksdorp records lack real timestamps, so the present analysis is static rather than fully temporal. Third, the Weighted GraphSAGE model is a proxy and not a full reproduction of DeepTrace. Fourth, the node-level split and globally normalized features require leakage audit before submission. Fifth, the SIR model uses simplifying assumptions and has not yet undergone sensitivity analysis. Sixth, the intervention analysis assumes selected nodes can be fully removed or intervened on, which is not a validated public-health deployment model.
+This study has several limitations. First, the dataset contains 340 individuals in 88 household components, which limits external validity for schools, workplaces, hospitals, or city-scale contact networks. Second, Klerksdorp records lack real timestamps, so the present analysis is static rather than fully temporal. Third, the Weighted GraphSAGE model is a proxy and not a full reproduction of DeepTrace. Fourth, Phase 03 removed the strongest identified leakage pathways, but remaining epidemiological variables still require source-level confirmation of observation timing. Fifth, the SIR model uses simplifying assumptions and has not yet undergone sensitivity analysis. Sixth, the intervention analysis assumes selected nodes can be fully removed or intervened on, which is not a validated public-health deployment model.
 
 \section{Conclusion}
 
-\costtrace\ demonstrates a reproducible graph-analysis workflow for budget-constrained intervention ranking in a household epidemic contact network. The results show that Degree Centrality is strong under an extremely low budget, while a GraphSAGE-based risk score performs better at moderate budgets under both counterfactual and SIR evaluation. The manuscript should be considered a proof of concept until additional leakage controls, sensitivity analyses, stronger baselines, and external datasets are added.
+\costtrace\ demonstrates a reproducible graph-analysis workflow for budget-constrained intervention ranking in a household epidemic contact network. After Phase 03 leakage control, Degree Centrality remains strong under an extremely low budget, GraphSAGE is competitive at the 5\% budget, and no single strategy dominates all budgets and metrics. The manuscript should be considered a proof of concept until multi-fold household validation, sensitivity analyses, stronger baselines, and external datasets are added.
 
 \section*{Ethics Statement}
 
-\TODO{Confirm exact ethics wording with the corresponding author and the dataset access conditions. Current repository evidence describes SASHTS as an academic research dataset. This study performs secondary computational analysis and does not implement real medical intervention.}
+This study is a secondary computational analysis of the SASHTS academic research dataset recorded in the local repository. The analysis does not recruit participants, contact individuals, or implement a real medical intervention. All reported results are aggregate graph, model, and simulation outputs. \TODO{Confirm original SASHTS ethics approval, consent terms, de-identification status, and whether the target journal requires the original approval identifier.}
 
 \section*{Data Availability}
 
-\TODO{Confirm whether raw SASHTS files may be redistributed. If not, replace with a statement that code and derived non-sensitive artifacts are available, while raw data must be obtained from the original data provider subject to its license/access conditions.}
+The local repository contains raw SASHTS files under \texttt{data/raw/}, processed graph artifacts under \texttt{data/processed/}, and generated metrics under \texttt{results/}. The public data-sharing statement cannot be finalized until raw-data redistribution permissions are confirmed. \TODO{Confirm the official SASHTS source URL/DOI, license/access terms, and whether raw files may be redistributed; if not, release code and non-sensitive derived artifacts only and direct users to the original data provider.}
 
 \section*{Code Availability}
 
@@ -333,7 +363,7 @@ The analysis code is organized under \texttt{src/costtrace/}, with the main entr
 
 \section*{AI/Tool Use Disclosure}
 
-\TODO{Add disclosure if required by the target journal.}
+Drafting and repository-upgrade assistance used AI coding tools inside the local development environment. All numerical claims in this manuscript are intended to trace to local code or generated artifacts. \TODO{Replace with the exact disclosure required by the confirmed target journal, including tool name/version if required.}
 
 \begin{thebibliography}{99}
 

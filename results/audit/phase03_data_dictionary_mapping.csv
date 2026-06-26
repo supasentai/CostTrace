@@ -1,0 +1,14 @@
+Dataset,Variable,Label,Options/Notes
+sashts_metadata,indid,Individual identifier ,"Site letter (J = Klerksdorp, S = Soweto) Household nr  - Individual nr"
+sashts_metadata,site,Site ,"Klerksdorp, Soweto"
+sashts_metadata,agegrp9,Age group (years),"<5, 5-12, 13-17, 18-34, 35-59, >=60"
+sashts_metadata,sex,Sex,"Male, Female"
+sashts_metadata,hhid,Household identifier,"Site letter (J = Klerksdorp, S = Soweto) Household nr"
+sashts_metadata,sleep_room_ix,Individual sleeps in same room as SARS-CoV-2 index case,"Yes, No"
+sashts_metadata,cared_by_ix,Individual's main caregiver is SARS-CoV-2 index case,"Yes, No"
+sashts_metadata,sus,Susceptible at baseline (based on serology),"Susceptible, Sero-pos at baseline"
+sashts_metadata,index,Index or household contact,"Index, Contact"
+sashts_metadata,sars,SARS-CoV-2 infection status,"Positive, Negative"
+sashts_contact_network,duration_sec,Duration of close proximity event in seconds,Integer
+sashts_contact_network,no_ts,No timestamp available,"No time stamp (1), Time stamp available (0)"
+sashts_contact_network,pair_sars,SARS-CoV-2 transmission occurred,"No transmission (Positive Negative pair), Transmission (Positive Positive pair), Both negative (Negative Negative pair)"

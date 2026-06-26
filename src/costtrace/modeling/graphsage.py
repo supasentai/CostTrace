@@ -58,69 +58,125 @@ def build_weighted_mean_adjacency(G: nx.Graph, nodes: list[str]) -> torch.Tensor
     return torch.where(row_sum > 0, adj / row_sum.clamp_min(1e-12), adj)
 
 
-def build_features_and_labels(scores_df: pd.DataFrame, nodes: list[str]) -> tuple[torch.Tensor, torch.Tensor, list[str]]:
+def build_features_labels_groups(
+    scores_df: pd.DataFrame, nodes: list[str]
+) -> tuple[torch.Tensor, torch.Tensor, list[str], list[str]]:
     scores = scores_df.set_index("node_id")
     feature_names = [
-        "degree_centrality_norm",
-        "weighted_degree_sec_norm",
-        "betweenness_centrality_norm",
-        "closeness_centrality_norm",
+        "degree_centrality_train_scaled",
+        "weighted_degree_sec_train_scaled",
+        "betweenness_centrality_train_scaled",
+        "closeness_centrality_train_scaled",
         "sleep_room_enc",
         "cared_by_enc",
         "age_enc_scaled",
         "sex_enc",
-        "sus_enc",
         "site_enc",
-        "is_index",
     ]
 
     rows = []
     labels = []
+    households = []
     for node in nodes:
         if node not in scores.index:
             rows.append([0.0] * len(feature_names))
             labels.append(0.0)
+            households.append("UNKNOWN")
             continue
 
         row = scores.loc[node]
         rows.append(
             [
-                float(row.get("degree_centrality_norm", 0.0)),
-                float(row.get("weighted_degree_sec_norm", 0.0)),
-                float(row.get("betweenness_centrality_norm", 0.0)),
-                float(row.get("closeness_centrality_norm", 0.0)),
+                float(row.get("degree_centrality", 0.0)),
+                float(row.get("weighted_degree_sec", 0.0)),
+                float(row.get("betweenness_centrality", 0.0)),
+                float(row.get("closeness_centrality", 0.0)),
                 float(row.get("sleep_room_enc", 0.0)),
                 float(row.get("cared_by_enc", 0.0)),
                 float(row.get("age_enc", 3.0)) / 5.0,
                 float(row.get("sex_enc", 0.0)),
-                float(row.get("sus_enc", 0.0)),
                 float(row.get("site_enc", 0.0)),
-                float(row.get("is_index", 0.0)),
             ]
         )
         labels.append(float(row.get("sars_label", 0.0)))
+        households.append(str(row.get("hhid", "UNKNOWN")))
 
-    return torch.tensor(rows, dtype=torch.float32), torch.tensor(labels, dtype=torch.float32), feature_names
+    return (
+        torch.tensor(rows, dtype=torch.float32),
+        torch.tensor(labels, dtype=torch.float32),
+        feature_names,
+        households,
+    )
 
 
-def stratified_masks(labels: torch.Tensor, seed: int = SEED) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+def household_masks(
+    households: list[str], labels: torch.Tensor, seed: int = SEED
+) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+    """Create train/validation/test masks with no household overlap across splits."""
     rng = np.random.default_rng(seed)
-    n = labels.numel()
+    n = len(households)
     train_mask = torch.zeros(n, dtype=torch.bool)
     val_mask = torch.zeros(n, dtype=torch.bool)
     test_mask = torch.zeros(n, dtype=torch.bool)
 
-    for label in [0.0, 1.0]:
-        idx = np.where(labels.numpy() == label)[0]
-        rng.shuffle(idx)
-        n_train = int(0.70 * len(idx))
-        n_val = int(0.15 * len(idx))
+    household_df = pd.DataFrame(
+        {
+            "idx": np.arange(n),
+            "hhid": households,
+            "label": labels.numpy(),
+        }
+    )
+    household_summary = (
+        household_df.groupby("hhid", sort=True)
+        .agg(n=("idx", "size"), positives=("label", "sum"))
+        .reset_index()
+    )
+    household_summary["attack_rate"] = (
+        household_summary["positives"] / household_summary["n"]
+    )
+    household_summary["rand"] = rng.random(len(household_summary))
+    household_summary = household_summary.sort_values(
+        ["attack_rate", "rand"], ascending=[False, True], kind="mergesort"
+    )
 
-        train_mask[idx[:n_train]] = True
-        val_mask[idx[n_train : n_train + n_val]] = True
-        test_mask[idx[n_train + n_val :]] = True
+    split_node_counts = {"train": 0, "val": 0, "test": 0}
+    split_targets = {"train": 0.70 * n, "val": 0.15 * n, "test": 0.15 * n}
+    household_to_split = {}
+
+    for row_number, row in enumerate(household_summary.itertuples(index=False)):
+        if row_number < 3:
+            split = ["train", "val", "test"][row_number]
+        else:
+            split = min(
+                split_node_counts,
+                key=lambda key: split_node_counts[key] / split_targets[key],
+            )
+        household_to_split[row.hhid] = split
+        split_node_counts[split] += int(row.n)
+
+    for idx, hhid in enumerate(households):
+        split = household_to_split[hhid]
+        if split == "train":
+            train_mask[idx] = True
+        elif split == "val":
+            val_mask[idx] = True
+        else:
+            test_mask[idx] = True
 
     return train_mask, val_mask, test_mask
+
+
+def scale_continuous_features(
+    x: torch.Tensor, train_mask: torch.Tensor, continuous_cols: list[int]
+) -> torch.Tensor:
+    """Min-max scale selected columns using train nodes only."""
+    out = x.clone()
+    train_x = out[train_mask][:, continuous_cols]
+    mins = train_x.min(dim=0).values
+    maxs = train_x.max(dim=0).values
+    denom = (maxs - mins).clamp_min(1e-12)
+    out[:, continuous_cols] = (out[:, continuous_cols] - mins) / denom
+    return out
 
 
 class WeightedGraphSAGEClassifier(torch.nn.Module):
@@ -177,8 +233,15 @@ def main() -> None:
     nodes = sorted(G.nodes())
 
     adj = build_weighted_mean_adjacency(G, nodes)
-    x, y, feature_names = build_features_and_labels(scores_df, nodes)
-    train_mask, val_mask, test_mask = stratified_masks(y)
+    x_raw, y, feature_names, households = build_features_labels_groups(scores_df, nodes)
+    train_mask, val_mask, test_mask = household_masks(households, y)
+    x = scale_continuous_features(x_raw, train_mask, continuous_cols=[0, 1, 2, 3])
+
+    split_households = {
+        "train": sorted({households[i] for i, flag in enumerate(train_mask.tolist()) if flag}),
+        "validation": sorted({households[i] for i, flag in enumerate(val_mask.tolist()) if flag}),
+        "test": sorted({households[i] for i, flag in enumerate(test_mask.tolist()) if flag}),
+    }
 
     n_pos = int(y[train_mask].sum().item())
     n_neg = int(train_mask.sum().item() - n_pos)
@@ -193,6 +256,11 @@ def main() -> None:
     print(
         f"Train: {int(train_mask.sum())} | Val: {int(val_mask.sum())} | "
         f"Test: {int(test_mask.sum())}"
+    )
+    print(
+        f"Households: train={len(split_households['train'])} | "
+        f"val={len(split_households['validation'])} | "
+        f"test={len(split_households['test'])}"
     )
     print(f"SARS+ in train: {n_pos} / {int(train_mask.sum())}")
 
@@ -278,7 +346,19 @@ def main() -> None:
         "epochs": EPOCHS,
         "best_epoch": int(best["epoch"]),
         "threshold": round(threshold, 4),
+        "split_protocol": "household_level_group_split_70_15_15_no_household_overlap",
+        "feature_scaling": "continuous feature min-max parameters fit on train households only",
+        "removed_leakage_proxy_features": ["is_index", "sus_enc"],
+        "setting": "household_held_out_node_classification; the full graph object is loaded, but connected components do not cross household split boundaries",
         "feature_names": feature_names,
+        "split_counts": {
+            "train_nodes": int(train_mask.sum()),
+            "validation_nodes": int(val_mask.sum()),
+            "test_nodes": int(test_mask.sum()),
+            "train_households": len(split_households["train"]),
+            "validation_households": len(split_households["validation"]),
+            "test_households": len(split_households["test"]),
+        },
         "train": {k: round(v, 4) for k, v in train_metrics.items()},
         "validation": {k: round(v, 4) for k, v in val_metrics.items()},
         "test": {k: round(v, 4) for k, v in test_metrics.items()},
@@ -292,6 +372,10 @@ def main() -> None:
                 "node_order": nodes,
                 "feature_names": feature_names,
                 "threshold": threshold,
+                "split_protocol": "household_level_group_split_70_15_15_no_household_overlap",
+                "split_households": split_households,
+                "removed_leakage_proxy_features": ["is_index", "sus_enc"],
+                "feature_scaling": "continuous feature min-max parameters fit on train households only",
                 "weighted_adjacency": "log1p(total_duration_sec), row-normalized",
             },
             f,

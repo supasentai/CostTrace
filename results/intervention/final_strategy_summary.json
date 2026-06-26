@@ -8,17 +8,17 @@
     },
     "5": {
       "strategy": "gnn",
-      "prevention_rate_pct": 26.8,
-      "transmission_coverage": 14.3,
-      "sir_reduction_pct": 22.2
+      "prevention_rate_pct": 17.6,
+      "transmission_coverage": 11.5,
+      "sir_reduction_pct": 12.6
     },
     "10": {
-      "strategy": "gnn",
-      "prevention_rate_pct": 49.0,
-      "transmission_coverage": 26.2,
-      "sir_reduction_pct": 42.7
+      "strategy": "random",
+      "prevention_rate_pct": 33.0,
+      "transmission_coverage": 19.2,
+      "sir_reduction_pct": 16.8
     }
   },
-  "gnn_minus_random_prevention_rate_k1_pct": 0.6000000000000001,
+  "gnn_minus_random_prevention_rate_k1_pct": -1.9999999999999998,
   "n_rows": 12
 }

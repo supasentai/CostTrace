@@ -3,40 +3,53 @@
   "implementation": "pure_pytorch_weighted_mean_aggregation",
   "seed": 42,
   "epochs": 500,
-  "best_epoch": 150,
-  "threshold": 0.24,
+  "best_epoch": 1,
+  "threshold": 0.05,
+  "split_protocol": "household_level_group_split_70_15_15_no_household_overlap",
+  "feature_scaling": "continuous feature min-max parameters fit on train households only",
+  "removed_leakage_proxy_features": [
+    "is_index",
+    "sus_enc"
+  ],
+  "setting": "household_held_out_node_classification; the full graph object is loaded, but connected components do not cross household split boundaries",
   "feature_names": [
-    "degree_centrality_norm",
-    "weighted_degree_sec_norm",
-    "betweenness_centrality_norm",
-    "closeness_centrality_norm",
+    "degree_centrality_train_scaled",
+    "weighted_degree_sec_train_scaled",
+    "betweenness_centrality_train_scaled",
+    "closeness_centrality_train_scaled",
     "sleep_room_enc",
     "cared_by_enc",
     "age_enc_scaled",
     "sex_enc",
-    "sus_enc",
-    "site_enc",
-    "is_index"
+    "site_enc"
   ],
+  "split_counts": {
+    "train_nodes": 238,
+    "validation_nodes": 52,
+    "test_nodes": 50,
+    "train_households": 61,
+    "validation_households": 15,
+    "test_households": 12
+  },
   "train": {
-    "auc": 0.9914,
-    "ap": 0.9966,
-    "f1": 0.9619,
-    "precision": 0.948,
-    "recall": 0.9762
+    "auc": 0.6398,
+    "ap": 0.8198,
+    "f1": 0.8247,
+    "precision": 0.7017,
+    "recall": 1.0
   },
   "validation": {
-    "auc": 0.8036,
-    "ap": 0.9162,
-    "f1": 0.8732,
-    "precision": 0.8857,
-    "recall": 0.8611
+    "auc": 0.5676,
+    "ap": 0.7794,
+    "f1": 0.8315,
+    "precision": 0.7115,
+    "recall": 1.0
   },
   "test": {
-    "auc": 0.7669,
-    "ap": 0.8995,
-    "f1": 0.8158,
-    "precision": 0.7949,
-    "recall": 0.8378
+    "auc": 0.4428,
+    "ap": 0.7359,
+    "f1": 0.8506,
+    "precision": 0.74,
+    "recall": 1.0
   }
 }
