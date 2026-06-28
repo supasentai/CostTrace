@@ -5,6 +5,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from costtrace.config import PATHS
+
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -20,11 +22,11 @@ logging.basicConfig(
 def main() -> None:
     logging.info("Intervention metrics summary start")
 
-    Path("results/intervention").mkdir(parents=True, exist_ok=True)
+    PATHS.intervention.mkdir(parents=True, exist_ok=True)
 
-    cf_df = pd.read_csv("results/intervention/counterfactual_results.csv")
-    sir_df = pd.read_csv("results/intervention/sir_intervention_results.csv")
-    topk_df = pd.read_csv("results/intervention/topk_budget_results.csv")
+    cf_df = pd.read_csv(PATHS.intervention / "counterfactual_results.csv")
+    sir_df = pd.read_csv(PATHS.intervention / "sir_intervention_results.csv")
+    topk_df = pd.read_csv(PATHS.intervention / "topk_budget_results.csv")
 
     final = cf_df.merge(
         sir_df[
@@ -54,7 +56,7 @@ def main() -> None:
     )
 
     final = final.sort_values(["budget_k_pct", "prevention_rate_pct"], ascending=[True, False])
-    final.to_csv("results/intervention/final_comparison.csv", index=False)
+    final.to_csv(PATHS.intervention / "final_comparison.csv", index=False)
 
     print("=" * 88)
     print("FINAL COMPARISON TABLE - SASHTS Budget-Constrained Intervention")
@@ -103,7 +105,7 @@ def main() -> None:
             k1.loc["gnn", "prevention_rate_pct"] - k1.loc["random", "prevention_rate_pct"]
         )
 
-    with open("results/intervention/final_strategy_summary.json", "w", encoding="utf-8") as f:
+    with open(PATHS.intervention / "final_strategy_summary.json", "w", encoding="utf-8") as f:
         json.dump(
             {
                 "best_by_budget": best_by_budget,

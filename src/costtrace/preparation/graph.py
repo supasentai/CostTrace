@@ -6,10 +6,13 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
+from costtrace.config import PATHS, require_existing
 
-Path("results/gephi").mkdir(parents=True, exist_ok=True)
-edges = pd.read_csv("data/processed/edges_clean.csv")
-meta = pd.read_csv("data/processed/metadata_clean.csv")
+
+PATHS.gephi.mkdir(parents=True, exist_ok=True)
+PATHS.processed_sashts.mkdir(parents=True, exist_ok=True)
+edges = pd.read_csv(require_existing(PATHS.processed_edges_clean, "processed SASHTS edges"))
+meta = pd.read_csv(require_existing(PATHS.processed_metadata, "processed SASHTS metadata"))
 
 # ── 1. Build weighted graph ────────────────────────────────────────────────────
 G = nx.from_pandas_edgelist(
@@ -55,18 +58,19 @@ for node in G.nodes(data=True):
     )
     node_records.append(rec)
 nodelist_df = pd.DataFrame(node_records)
-nodelist_df.to_csv("data/processed/nodelist.csv", index=False)
+nodelist_df.to_csv(PATHS.processed_nodelist_canonical, index=False)
 
 # ── 4. Export EdgeList ─────────────────────────────────────────────────────────
 edgelist_df = edges[
     ["indid1", "indid2", "total_duration_sec", "n_contacts", "pair_sars"]
 ].copy()
 edgelist_df.columns = ["source", "target", "weight", "n_contacts", "transmission"]
-edgelist_df.to_csv("data/processed/edgelist.csv", index=False)
+edgelist_df.to_csv(PATHS.processed_edgelist_canonical, index=False)
 
 # ── 5. Lưu graph object ───────────────────────────────────────────────────────
-pickle.dump(G, open("data/processed/graph.pkl", "wb"))
-nx.write_gexf(G, "results/gephi/contact_network.gexf")
+with open(PATHS.processed_graph_canonical, "wb") as f:
+    pickle.dump(G, f)
+nx.write_gexf(G, PATHS.gephi / "contact_network.gexf")
 
 # ── 6. Print stats ────────────────────────────────────────────────────────────
 components = list(nx.connected_components(G))

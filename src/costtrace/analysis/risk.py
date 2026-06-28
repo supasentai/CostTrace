@@ -4,6 +4,8 @@ from pathlib import Path
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
+from costtrace.config import PATHS
+
 log_path = Path("logs/analysis.log")
 log_path.parent.mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -14,7 +16,7 @@ logging.basicConfig(
 
 logging.info("Risk score synthesis start")
 
-centrality_df = pd.read_csv("results/metrics/centrality_scores.csv").sort_values("node_id")
+centrality_df = pd.read_csv(PATHS.metrics / "centrality_scores.csv").sort_values("node_id")
 
 # Encode categorical features for future GNN use
 centrality_df["sex_enc"] = (centrality_df["sex"] == "Male").astype(int)
@@ -55,9 +57,9 @@ centrality_df = centrality_df.sort_values(
 )
 centrality_df["rank_by_composite"] = range(1, len(centrality_df) + 1)
 
-Path("results/metrics").mkdir(parents=True, exist_ok=True)
-centrality_df.to_csv("results/metrics/node_scores.csv", index=False)
-print("OK: Exported results/metrics/node_scores.csv")
+PATHS.metrics.mkdir(parents=True, exist_ok=True)
+centrality_df.to_csv(PATHS.metrics / "node_scores.csv", index=False)
+print(f"OK: Exported {PATHS.metrics / 'node_scores.csv'}")
 print("\nTop 15 highest-risk nodes:")
 top_cols = [
     "node_id",

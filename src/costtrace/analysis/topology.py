@@ -7,6 +7,8 @@ import numpy as np
 import pandas as pd
 import pickle
 
+from costtrace.config import PATHS, require_existing
+
 log_path = Path("logs/analysis.log")
 log_path.parent.mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -17,7 +19,8 @@ logging.basicConfig(
 
 logging.info("Basic network metrics start")
 
-G = pickle.load(open("data/processed/graph.pkl", "rb"))
+with open(require_existing(PATHS.processed_graph, "processed SASHTS graph"), "rb") as f:
+    G = pickle.load(f)
 comps = [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 # Per-component stats
@@ -39,8 +42,8 @@ for i, sg in enumerate(comps):
     )
 
 comp_df = pd.DataFrame(comp_stats)
-Path("results/metrics").mkdir(parents=True, exist_ok=True)
-comp_df.to_csv("results/metrics/household_metrics.csv", index=False)
+PATHS.metrics.mkdir(parents=True, exist_ok=True)
+comp_df.to_csv(PATHS.metrics / "household_metrics.csv", index=False)
 
 # Aggregate metrics
 metrics = {
@@ -57,7 +60,7 @@ metrics = {
     "note": "Metrics computed per household component (88 separate HH subgraphs)",
 }
 
-with open("results/metrics/basic_metrics.json", "w") as f:
+with open(PATHS.metrics / "basic_metrics.json", "w") as f:
     json.dump(metrics, f, indent=2)
 
 print("=== BASIC NETWORK METRICS ===")

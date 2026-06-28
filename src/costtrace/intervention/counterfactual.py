@@ -6,6 +6,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from costtrace.config import PATHS, require_existing
+
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -71,16 +73,17 @@ def evaluate_selected_set(
 def main() -> None:
     logging.info("Counterfactual analysis start")
 
-    _ = pickle.load(open("data/processed/graph.pkl", "rb"))
-    edges_df = pd.read_csv("data/processed/edgelist.csv")
-    meta = pd.read_csv("data/processed/metadata_clean.csv")
+    with open(require_existing(PATHS.processed_graph, "processed SASHTS graph"), "rb") as f:
+        _ = pickle.load(f)
+    edges_df = pd.read_csv(require_existing(PATHS.processed_edgelist, "processed SASHTS edgelist"))
+    meta = pd.read_csv(require_existing(PATHS.processed_metadata, "processed SASHTS metadata"))
 
-    Path("results/intervention").mkdir(parents=True, exist_ok=True)
+    PATHS.intervention.mkdir(parents=True, exist_ok=True)
 
-    with open("results/intervention/selected_nodes_by_strategy.json", encoding="utf-8") as f:
+    with open(PATHS.intervention / "selected_nodes_by_strategy.json", encoding="utf-8") as f:
         selected_map = json.load(f)
     random_replicates = {}
-    random_replicates_path = Path("results/intervention/random_replicates_by_budget.json")
+    random_replicates_path = PATHS.intervention / "random_replicates_by_budget.json"
     if random_replicates_path.exists():
         with open(random_replicates_path, encoding="utf-8") as f:
             random_replicates = json.load(f)
@@ -149,7 +152,7 @@ def main() -> None:
             )
 
     cf_df = pd.DataFrame(rows)
-    cf_df.to_csv("results/intervention/counterfactual_results.csv", index=False)
+    cf_df.to_csv(PATHS.intervention / "counterfactual_results.csv", index=False)
 
     print("\n=== SUMMARY: Secondary Infections Prevented (%) ===")
     print(

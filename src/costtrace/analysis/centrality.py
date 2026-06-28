@@ -6,6 +6,8 @@ import numpy as np
 import pandas as pd
 import pickle
 
+from costtrace.config import PATHS, require_existing
+
 log_path = Path("logs/analysis.log")
 log_path.parent.mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -16,7 +18,8 @@ logging.basicConfig(
 
 logging.info("Centrality scores start")
 
-G = pickle.load(open("data/processed/graph.pkl", "rb"))
+with open(require_existing(PATHS.processed_graph, "processed SASHTS graph"), "rb") as f:
+    G = pickle.load(f)
 comps = [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 all_centrality = []
@@ -65,8 +68,8 @@ for sg in comps:
         )
 
 centrality_df = pd.DataFrame(all_centrality).sort_values(["hhid", "node_id"])
-Path("results/metrics").mkdir(parents=True, exist_ok=True)
-centrality_df.to_csv("results/metrics/centrality_scores.csv", index=False)
+PATHS.metrics.mkdir(parents=True, exist_ok=True)
+centrality_df.to_csv(PATHS.metrics / "centrality_scores.csv", index=False)
 
 # Print top super-spreaders (SARS+ nodes with highest degree)
 print("\n=== TOP 10 SUPER-SPREADERS (SARS+ | Highest Degree Centrality) ===")

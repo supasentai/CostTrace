@@ -5,10 +5,13 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
+from costtrace.config import PATHS, require_existing
 
-G = pickle.load(open("data/processed/graph.pkl", "rb"))
-meta = pd.read_csv("data/processed/metadata_clean.csv")
-edges = pd.read_csv("data/processed/edgelist.csv")
+
+with open(require_existing(PATHS.processed_graph, "processed SASHTS graph"), "rb") as f:
+    G = pickle.load(f)
+meta = pd.read_csv(require_existing(PATHS.processed_metadata, "processed SASHTS metadata"))
+edges = pd.read_csv(require_existing(PATHS.processed_edgelist, "processed SASHTS edgelist"))
 
 # Per-household stats
 comps = list(nx.connected_components(G))
@@ -63,7 +66,7 @@ eda = {
 }
 
 # Sửa đổi: ghi JSON bằng UTF-8 để giữ đúng ký tự Unicode trong dataset_name/has_timestamp.
-with open("data/processed/eda_summary.json", "w", encoding="utf-8") as f:
+with open(PATHS.eda_summary_canonical, "w", encoding="utf-8") as f:
     json.dump(eda, f, indent=2, default=str)
 
 print(json.dumps(eda, indent=2, default=str))

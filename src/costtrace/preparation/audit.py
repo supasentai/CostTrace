@@ -1,11 +1,13 @@
 import pandas as pd
 import sys
 
+from costtrace.config import PATHS, require_existing
+
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-net = pd.read_csv("data/raw/sashts_contact_network.csv")
-meta = pd.read_csv("data/raw/sashts_metadata.csv")
+net = pd.read_csv(require_existing(PATHS.raw_contact_network, "raw SASHTS contact network"))
+meta = pd.read_csv(require_existing(PATHS.raw_metadata, "raw SASHTS metadata"))
 
 assert len(net) == 140542, "contact_network row count mismatch"
 assert len(meta) == 340, "metadata row count mismatch"

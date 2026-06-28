@@ -207,11 +207,11 @@ flowchart LR
 
 ### Detailed Research Procedure
 
-**Step 1 - Data acquisition and source verification.** The study begins by loading raw proximity events from [`data/raw/sashts_contact_network.csv`](data/raw/sashts_contact_network.csv) and participant metadata from [`data/raw/sashts_metadata.csv`](data/raw/sashts_metadata.csv). At this stage, the pipeline verifies record counts, checks missingness, identifies the distinction between real and unavailable timestamps, and confirms that the raw files match the SASHTS household-transmission setting described in the report.
+**Step 1 - Data acquisition and source verification.** The study begins by loading raw proximity events from [`data/raw/sashts/sashts_contact_network.csv`](data/raw/sashts/sashts_contact_network.csv) and participant metadata from [`data/raw/sashts/sashts_metadata.csv`](data/raw/sashts/sashts_metadata.csv). At this stage, the pipeline verifies record counts, checks missingness, identifies the distinction between real and unavailable timestamps, and confirms that the raw files match the SASHTS household-transmission setting described in the report.
 
 **Step 2 - Contact-event curation.** Raw sensor events are standardized before graph construction. Self-loops are removed, unordered individual pairs are canonicalized so that A-B and B-A are treated as the same dyad, and repeated proximity observations are aggregated into a single pair-level contact record. The resulting edge weight is total contact duration in seconds, while contact frequency is retained as an additional exposure-intensity attribute.
 
-**Step 3 - Metadata integration and graph construction.** Each individual is represented as a node, and each aggregated contact pair is represented as an undirected weighted edge. Node attributes such as site, age group, sex, SARS status, index/contact role, susceptibility, sleep-room exposure, caregiving exposure, and household identifier are attached to the graph. The core outputs of this stage are [`data/processed/graph.pkl`](data/processed/graph.pkl), [`data/processed/nodelist.csv`](data/processed/nodelist.csv), [`data/processed/edgelist.csv`](data/processed/edgelist.csv), and the Gephi export [`results/gephi/contact_network.gexf`](results/gephi/contact_network.gexf).
+**Step 3 - Metadata integration and graph construction.** Each individual is represented as a node, and each aggregated contact pair is represented as an undirected weighted edge. Node attributes such as site, age group, sex, SARS status, index/contact role, susceptibility, sleep-room exposure, caregiving exposure, and household identifier are attached to the graph. The core outputs of this stage are [`data/processed/sashts/graph.pkl`](data/processed/sashts/graph.pkl), [`data/processed/sashts/nodelist.csv`](data/processed/sashts/nodelist.csv), [`data/processed/sashts/edgelist.csv`](data/processed/sashts/edgelist.csv), and the Gephi export [`results/gephi/contact_network.gexf`](results/gephi/contact_network.gexf).
 
 **Step 4 - Descriptive topology analysis.** The graph is analyzed as 88 connected household components rather than as a single connected population graph. The pipeline computes global and household-level statistics, including node count, edge count, component count, density, average degree, maximum degree, household-size distribution, clustering, and transmission-edge distribution. This step establishes the empirical fact that the network is globally sparse but locally dense inside households.
 
@@ -430,10 +430,10 @@ The pipeline uses fixed seeds where randomness is involved. Small numeric differ
 
 | Artifact | Purpose |
 |---|---|
-| [`data/processed/graph.pkl`](data/processed/graph.pkl) | NetworkX graph after preprocessing |
-| [`data/processed/edgelist.csv`](data/processed/edgelist.csv) | Weighted edge list for analysis |
-| [`data/processed/nodelist.csv`](data/processed/nodelist.csv) | Node attributes and graph features |
-| [`data/processed/eda_summary.json`](data/processed/eda_summary.json) | Dataset summary statistics |
+| [`data/processed/sashts/graph.pkl`](data/processed/sashts/graph.pkl) | NetworkX graph after preprocessing |
+| [`data/processed/sashts/edgelist.csv`](data/processed/sashts/edgelist.csv) | Weighted edge list for analysis |
+| [`data/processed/sashts/nodelist.csv`](data/processed/sashts/nodelist.csv) | Node attributes and graph features |
+| [`data/processed/sashts/eda_summary.json`](data/processed/sashts/eda_summary.json) | Dataset summary statistics |
 | [`results/metrics/basic_metrics.json`](results/metrics/basic_metrics.json) | Core topology metrics |
 | [`results/metrics/centrality_scores.csv`](results/metrics/centrality_scores.csv) | Centrality table |
 | [`results/metrics/community_metrics.json`](results/metrics/community_metrics.json) | Louvain community metrics |
