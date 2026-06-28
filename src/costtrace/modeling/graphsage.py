@@ -18,6 +18,8 @@ from sklearn.metrics import (
     roc_auc_score,
 )
 
+from costtrace.config import PATHS, require_existing
+
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -225,11 +227,12 @@ def main() -> None:
     set_seed(SEED)
     logging.info("GraphSAGE proxy training start")
 
-    Path("models").mkdir(exist_ok=True)
-    Path("results/model").mkdir(parents=True, exist_ok=True)
+    PATHS.models.mkdir(exist_ok=True)
+    PATHS.model_results.mkdir(parents=True, exist_ok=True)
 
-    G = pickle.load(open("data/processed/graph.pkl", "rb"))
-    scores_df = pd.read_csv("results/metrics/node_scores.csv")
+    with open(require_existing(PATHS.processed_graph, "processed SASHTS graph"), "rb") as f:
+        G = pickle.load(f)
+    scores_df = pd.read_csv(PATHS.metrics / "node_scores.csv")
     nodes = sorted(G.nodes())
 
     adj = build_weighted_mean_adjacency(G, nodes)
@@ -307,7 +310,7 @@ def main() -> None:
         best["epoch"] = EPOCHS
 
     model.load_state_dict(best["state"])
-    torch.save(model.state_dict(), "models/gnn_best.pt")
+    torch.save(model.state_dict(), PATHS.models / "gnn_best.pt")
 
     all_probs = predict_probs(model, x, adj)
     val_true = y[val_mask].numpy().astype(int)
@@ -337,7 +340,7 @@ def main() -> None:
             "sars_label": y.numpy().astype(int),
         }
     )
-    gnn_df.to_csv("results/model/gnn_risk_scores.csv", index=False)
+    gnn_df.to_csv(PATHS.model_results / "gnn_risk_scores.csv", index=False)
 
     metrics = {
         "model": "WeightedGraphSAGEClassifier",
@@ -363,10 +366,10 @@ def main() -> None:
         "validation": {k: round(v, 4) for k, v in val_metrics.items()},
         "test": {k: round(v, 4) for k, v in test_metrics.items()},
     }
-    with open("results/model/gnn_metrics.json", "w", encoding="utf-8") as f:
+    with open(PATHS.model_results / "gnn_metrics.json", "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
 
-    with open("models/gnn_metadata.json", "w", encoding="utf-8") as f:
+    with open(PATHS.models / "gnn_metadata.json", "w", encoding="utf-8") as f:
         json.dump(
             {
                 "node_order": nodes,

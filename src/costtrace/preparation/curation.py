@@ -4,11 +4,13 @@ import sys
 import numpy as np
 import pandas as pd
 
+from costtrace.config import PATHS, require_existing
+
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-net = pd.read_csv("data/raw/sashts_contact_network.csv")
-meta = pd.read_csv("data/raw/sashts_metadata.csv")
+net = pd.read_csv(require_existing(PATHS.raw_contact_network, "raw SASHTS contact network"))
+meta = pd.read_csv(require_existing(PATHS.raw_metadata, "raw SASHTS metadata"))
 
 print(f"Raw rows: {len(net):,}")
 
@@ -69,11 +71,11 @@ diff = edge_nodes - meta_nodes
 print(f"\nNodes in edges but NOT in metadata: {len(diff)}")  # phải = 0
 
 #  7. Export 
-os.makedirs("data/processed", exist_ok=True)
+os.makedirs(PATHS.processed_sashts, exist_ok=True)
 
-edge_agg.to_csv("data/processed/edges_clean.csv", index=False)
-meta.to_csv("data/processed/metadata_clean.csv", index=False)
+edge_agg.to_csv(PATHS.processed_edges_clean_canonical, index=False)
+meta.to_csv(PATHS.processed_metadata_canonical, index=False)
 
 print("\nCleaning done")
-print(f"   Exported: data/processed/edges_clean.csv ({len(edge_agg)} edges)")
-print(f"   Exported: data/processed/metadata_clean.csv ({len(meta)} nodes)")
+print(f"   Exported: {PATHS.processed_edges_clean_canonical} ({len(edge_agg)} edges)")
+print(f"   Exported: {PATHS.processed_metadata_canonical} ({len(meta)} nodes)")

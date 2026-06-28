@@ -80,6 +80,7 @@ NOTEBOOKS = {
             if ROOT.name == "notebooks":
                 ROOT = ROOT.parent
             DATA = ROOT / "data"
+            SASHTS = DATA / "processed" / "sashts"
             RESULTS = ROOT / "results"
             FIG = RESULTS / "figures"
             FIG.mkdir(parents=True, exist_ok=True)
@@ -89,10 +90,10 @@ NOTEBOOKS = {
             except OSError:
                 pass
 
-            with open(DATA / "processed" / "graph.pkl", "rb") as f:
+            with open(SASHTS / "graph.pkl", "rb") as f:
                 G = pickle.load(f)
-            meta = pd.read_csv(DATA / "processed" / "metadata_clean.csv")
-            edges = pd.read_csv(DATA / "processed" / "edgelist.csv")
+            meta = pd.read_csv(SASHTS / "metadata_clean.csv")
+            edges = pd.read_csv(SASHTS / "edgelist.csv")
             scores = pd.read_csv(RESULTS / "metrics" / "node_scores.csv")
 
             label_col = "s" + "ars"

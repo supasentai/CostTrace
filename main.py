@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -42,7 +43,14 @@ def run_script(script_path: Path) -> None:
         raise FileNotFoundError(f"Missing script: {script_path}")
 
     print(f"\n=== Running {script_path.relative_to(ROOT)} ===", flush=True)
-    subprocess.run([sys.executable, str(script_path)], cwd=ROOT, check=True)
+    env = os.environ.copy()
+    src_path = str(ROOT / "src")
+    env["PYTHONPATH"] = (
+        src_path
+        if not env.get("PYTHONPATH")
+        else src_path + os.pathsep + env["PYTHONPATH"]
+    )
+    subprocess.run([sys.executable, str(script_path)], cwd=ROOT, check=True, env=env)
 
 
 def selected_scripts(phase: str) -> list[Path]:
