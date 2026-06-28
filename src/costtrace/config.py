@@ -37,6 +37,14 @@ class ProjectPaths:
         return self.results / "intervention"
 
     @property
+    def figures(self) -> Path:
+        return self.results / "figures"
+
+    @property
+    def phase05_figures(self) -> Path:
+        return self.figures / "phase05"
+
+    @property
     def audit(self) -> Path:
         return self.results / "audit"
 
@@ -156,3 +164,58 @@ def require_existing(path: Path, label: str) -> Path:
 
 
 PATHS = ProjectPaths()
+
+
+@dataclass(frozen=True)
+class Phase05Config:
+    profile: str
+    random_seed: int
+    n_runs: int
+    t_max: int
+    beta_values: tuple[float, ...]
+    gamma_values: tuple[float, ...]
+    default_beta: float
+    default_gamma: float
+    budget_levels_pct: tuple[int, ...]
+    strategies: tuple[str, ...]
+    run_level_results: str = "phase05_run_level_results.csv"
+    timeseries_results: str = "phase05_timeseries_results.csv"
+    baseline_summary: str = "phase05_baseline_summary.csv"
+    parameter_sweep: str = "phase05_parameter_sweep.csv"
+    budget_curve: str = "phase05_budget_curve.csv"
+    budget_decision_table: str = "phase05_budget_decision_table.csv"
+    uncertainty_summary: str = "phase05_uncertainty_summary.csv"
+
+    @property
+    def parameter_grid(self) -> tuple[tuple[float, float], ...]:
+        return tuple((beta, gamma) for beta in self.beta_values for gamma in self.gamma_values)
+
+
+def phase05_config(profile: str = "smoke") -> Phase05Config:
+    if profile == "smoke":
+        return Phase05Config(
+            profile="smoke",
+            random_seed=42,
+            n_runs=3,
+            t_max=10,
+            beta_values=(0.20, 0.25, 0.30),
+            gamma_values=(0.10,),
+            default_beta=0.25,
+            default_gamma=0.10,
+            budget_levels_pct=tuple(range(1, 21)),
+            strategies=("random", "degree", "betweenness", "gnn"),
+        )
+    if profile == "paper":
+        return Phase05Config(
+            profile="paper",
+            random_seed=42,
+            n_runs=50,
+            t_max=30,
+            beta_values=(0.15, 0.20, 0.25, 0.30, 0.35),
+            gamma_values=(0.05, 0.10, 0.15),
+            default_beta=0.25,
+            default_gamma=0.10,
+            budget_levels_pct=tuple(range(1, 21)),
+            strategies=("random", "degree", "betweenness", "gnn"),
+        )
+    raise ValueError(f"Unknown Phase 05 config profile: {profile}")

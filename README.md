@@ -53,9 +53,9 @@ The project compares four strategies:
 - The SASHTS graph contains **340 individuals**, **88 household components**, and **542 weighted contact edges** aggregated from **140,542 raw proximity events**.
 - The graph is sparse globally, but very dense within households: global density is **0.0094**, while average household density is **0.9633**.
 - Louvain community detection recovers **88 communities**, matching the household components with **100% household agreement** and **0.9696 modularity**.
-- The Weighted GraphSAGE proxy achieves **test AUC = 0.7669** and **test Average Precision = 0.8995**, which is useful for top-k ranking even though the dataset is small.
+- The full PyTorch GraphSAGE summary reports **test AUC = 0.5772 +/- 0.0443** and **test Average Precision = 0.7679 +/- 0.0246** across 15 runs.
 - At **1% budget** only 3 nodes can be selected. Degree is the best counterfactual strategy, with **4.6% prevention rate**.
-- At **5% and 10% budgets**, GNN becomes clearly stronger, reaching **26.8%** and **49.0% prevention rate**, with SIR reductions of **22.2%** and **42.7%**.
+- At **5% and 10% budgets**, current intervention artifacts report GNN prevention rates of **17.6%** and **28.1%**, with SIR reductions of **12.6%** and **22.7%**.
 - There is no universally dominant strategy. The best choice depends on budget size, evaluation metric, and whether explainability or learned risk ranking is more important.
 
 ## Visual Report
@@ -321,11 +321,11 @@ Important metrics:
 | 1% | 3 | GNN | 100.0% | 2.1% | 3.9% | **3.8%** |
 | 1% | 3 | Random | 71.7% | 1.7% | 3.3% | 1.2% |
 | 1% | 3 | Betweenness | 66.7% | 0.3% | 0.7% | 1.0% |
-| 5% | 17 | GNN | 100.0% | 14.3% | **26.8%** | **22.2%** |
+| 5% | 17 | GNN | 100.0% | 11.5% | **17.6%** | **12.6%** |
 | 5% | 17 | Random | 70.8% | 9.7% | 17.4% | 7.6% |
 | 5% | 17 | Betweenness | 64.7% | 6.3% | 11.8% | 8.9% |
 | 5% | 17 | Degree | 64.7% | 8.4% | 10.5% | 6.6% |
-| 10% | 34 | GNN | 100.0% | 26.2% | **49.0%** | **42.7%** |
+| 10% | 34 | GNN | 94.1% | 19.9% | **28.1%** | **22.7%** |
 | 10% | 34 | Random | 70.7% | 19.2% | 33.0% | 16.8% |
 | 10% | 34 | Betweenness | 70.6% | 16.4% | 30.7% | 20.4% |
 | 10% | 34 | Degree | 64.7% | 17.1% | 22.2% | 14.6% |
@@ -334,7 +334,7 @@ Important metrics:
 
 **1% budget.** Only three nodes are selected, so results are sensitive to individual node choice. Degree performs best in counterfactual prevention because the highest-degree nodes directly cover more transmission edges in small household components. GNN still produces the best SIR reduction, but the margin is small.
 
-**5% budget.** GNN becomes the strongest strategy. It selects 17 nodes with 100% Precision@k and reaches 26.8% prevention rate. This shows that once more than a handful of nodes can be selected, multi-feature learned ranking becomes more useful than single centrality metrics.
+**5% budget.** GNN becomes the strongest strategy. It selects 17 nodes with 100% Precision@k and reaches 17.6% prevention rate. This shows that once more than a handful of nodes can be selected, multi-feature learned ranking becomes more useful than single centrality metrics.
 
 **10% budget.** GNN dominates both evaluation layers. It blocks 75 observed transmission edges, reaches 49.0% prevention rate, and reduces simulated infections by 42.7% against baseline.
 

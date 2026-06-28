@@ -1,0 +1,4 @@
+profile,param_id,beta,gamma,n_runs,mean_baseline_infected_per_hh,std_baseline_infected_per_hh,p2_5_baseline_infected_per_hh,p97_5_baseline_infected_per_hh
+smoke,beta0.20_gamma0.10,0.2,0.1,3,3.1364,0.1185,2.9869,3.2568
+smoke,beta0.25_gamma0.10,0.25,0.1,3,3.3712,0.0789,3.2778,3.4614
+smoke,beta0.30_gamma0.10,0.3,0.1,3,3.5795,0.0335,3.5369,3.6125
