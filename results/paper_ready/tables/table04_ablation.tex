@@ -1,0 +1,11 @@
+\begin{tabular}{llrllll}
+\toprule
+model & feature\_set & runs & test\_auc\_mean\_std & test\_ap\_mean\_std & test\_f1\_mean\_std & test\_brier\_mean\_std \\
+\midrule
+graph\_remove\_centrality & remove\_centrality & 15 & 0.6159 +/- 0.0390 & 0.8022 +/- 0.0317 & 0.8267 +/- 0.0123 & 0.2444 +/- 0.0041 \\
+graph\_remove\_edge\_contact & remove\_edge\_contact & 15 & 0.6180 +/- 0.0356 & 0.8022 +/- 0.0322 & 0.8264 +/- 0.0164 & 0.2423 +/- 0.0055 \\
+graph\_full & full & 15 & 0.5793 +/- 0.0763 & 0.7747 +/- 0.0439 & 0.8252 +/- 0.0142 & 0.2446 +/- 0.0044 \\
+no\_graph\_mlp\_full & full\_no\_graph & 15 & 0.5181 +/- 0.0669 & 0.7391 +/- 0.0462 & 0.8297 +/- 0.0065 & 0.2499 +/- 0.0002 \\
+graph\_remove\_metadata & remove\_metadata & 15 & 0.5152 +/- 0.0546 & 0.7283 +/- 0.0325 & 0.8279 +/- 0.0088 & 0.2488 +/- 0.0025 \\
+\bottomrule
+\end{tabular}

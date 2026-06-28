@@ -1,0 +1,9 @@
+metric,value
+n_nodes_total,340.0
+n_edges_total,542.0
+n_households,88.0
+avg_household_size,3.8636363636363638
+avg_density_per_hh,0.9632575757575759
+avg_diameter_per_hh,1.1704545454545454
+avg_clustering_per_hh,0.7993686868686868
+overall_attack_rate_pct,70.88235294117648
